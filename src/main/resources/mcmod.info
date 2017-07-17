@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mfm",
+  "name": "First Mod",
+  "description": "First Mod",
+  "version": "${1.0}",
+  "mcversion": "$[1.11.2]",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Mr.Bengonio"],
+  "credits": "Idk",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
