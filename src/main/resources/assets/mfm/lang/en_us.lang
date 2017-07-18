@@ -1,7 +1,20 @@
 //Items
+
+//Ingot
 item.obsidianingot.name=Obsidian Ingot
 
+item.cupalite_ingot.name=Cupalite Ingot
+item.saspum_ingot.name=Saspum Ingot
+item.kreuthil_ingot.name=Kreuthil Ingot
+item.xasmoninium_ingot.name=Xasmoninium Ingot
 //Blocks
 
+//Ores
+
+tile.cupalite_ore.name=Cupalite Ore
+tile.saspum_ore.name=Saspum Ore
+tile.kreuthil_ore.name=Kreuthil Ore
+tile.xasmoninium_ore.name=Xasmoninium Ore
+
 //Creative Tab
-itemGroup.tab_first=Project Kreuthil Tab
+itemGroup.kreuthil_items=Project Kreuthil

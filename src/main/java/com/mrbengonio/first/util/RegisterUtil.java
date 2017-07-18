@@ -15,8 +15,9 @@ import net.minecraftforge.fml.relauncher.Side;
 public class RegisterUtil {
 	// register it here
 	public static void registerAll(FMLPreInitializationEvent event) {
-		registerBlocks(event, Blocks.LukasBlock);
-		registerItems(event, Items.obsidianingot, Items.testItem);
+		registerBlocks(event, Blocks.cupaliteOre, Blocks.kreuthilOre, Blocks.saspumOre, Blocks.xasmoOre);
+		registerItems(event, Items.obsidianingot, Items.cupaliteingot, Items.kreuthilingot, Items.saspumingot,
+				Items.xasmoingot);
 	}
 
 	// A method used to register blocks

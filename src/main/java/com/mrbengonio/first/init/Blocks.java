@@ -9,7 +9,16 @@ import net.minecraft.block.material.Material;
 public class Blocks {
 
 	// Register Blocks here
-	public static final Block LukasBlock = new BlockGenericBlock("lukas_block", Material.ROCK,
-			CreativeTabsHandler.tabKreuthil, 5F, 15F, "pickaxe", 1);
 
+	// Ores
+	public static final Block cupaliteOre = new BlockGenericBlock("cupalite_ore", Material.ROCK,
+			CreativeTabsHandler.tabKreuthil, 6F, 50F, "pickaxe", 3);
+	public static final Block saspumOre = new BlockGenericBlock("saspum_ore", Material.ROCK,
+			CreativeTabsHandler.tabKreuthil, 6F, 50F, "pickaxe", 3);
+	public static final Block kreuthilOre = new BlockGenericBlock("kreuthil_ore", Material.ROCK,
+			CreativeTabsHandler.tabKreuthil, 6F, 50F, "pickaxe", 3);
+	public static final Block xasmoOre = new BlockGenericBlock("xasmoninium_ore", Material.ROCK,
+			CreativeTabsHandler.tabKreuthil, 6F, 50F, "pickaxe", 3);
+
+	// Other Blocks
 }
