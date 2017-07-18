@@ -1,8 +1,8 @@
-package init;
+package com.mrbengonio.first.init;
 
 import com.mrbengonio.first.Reference;
+import com.mrbengonio.first.items.ItemObsidianingot;
 
-import items.ItemObsidianingot;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;

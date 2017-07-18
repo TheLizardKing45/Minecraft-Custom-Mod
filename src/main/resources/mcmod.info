@@ -1,14 +1,14 @@
 [
 {
   "modid": "mfm",
-  "name": "First Mod",
-  "description": "First Mod",
+  "name": "Project Kreuthil",
+  "description": "A mod to end all mods.... You get the idea!",
   "version": "${1.0}",
   "mcversion": "$[1.11.2]",
   "url": "",
   "updateUrl": "",
-  "authorList": ["Mr.Bengonio"],
-  "credits": "Idk",
+  "authorList": ["Mr.Bengonio", "lukasdragon"],
+  "credits": "The modding community!",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

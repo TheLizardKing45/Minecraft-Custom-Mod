@@ -1,4 +1,4 @@
-package items;
+package com.mrbengonio.first.items;
 
 import com.mrbengonio.first.Reference;
 

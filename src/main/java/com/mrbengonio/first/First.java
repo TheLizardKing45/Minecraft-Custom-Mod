@@ -1,8 +1,8 @@
 package com.mrbengonio.first;
 
+import com.mrbengonio.first.init.ModItems;
 import com.mrbengonio.first.proxy.CommonProxy;
 
-import init.ModItems;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;

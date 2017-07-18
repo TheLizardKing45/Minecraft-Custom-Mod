@@ -1,6 +1,6 @@
 package com.mrbengonio.first.proxy;
 
-import init.ModItems;
+import com.mrbengonio.first.init.ModItems;
 
 public class ClientProxy implements CommonProxy {
 
