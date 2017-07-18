@@ -1,6 +1,12 @@
 //Items
+
+//Ingot
 item.obsidianingot.name=Obsidian Ingot
 
+item.cupalite_ingot.name=Cupalite Ingot
+item.saspum_ingot.name=Saspum Ingot
+item.kreuthil_ingot.name=Kreuthil Ingot
+item.xasmoninium_ingot.name=Xasmoninium Ingot
 //Blocks
 
 //Ores
