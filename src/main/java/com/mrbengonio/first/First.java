@@ -5,6 +5,8 @@ import org.apache.logging.log4j.Logger;
 
 import com.mrbengonio.first.proxy.CommonProxy;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
