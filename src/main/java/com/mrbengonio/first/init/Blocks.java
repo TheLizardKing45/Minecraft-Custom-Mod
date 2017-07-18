@@ -9,6 +9,7 @@ import net.minecraft.block.material.Material;
 public class Blocks {
 
 	// Register Blocks here
+
 	// Ores
 	public static final Block cupaliteOre = new BlockGenericBlock("cupalite_ore", Material.ROCK,
 			CreativeTabsHandler.tabKreuthil, 6F, 50F, "pickaxe", 3);
