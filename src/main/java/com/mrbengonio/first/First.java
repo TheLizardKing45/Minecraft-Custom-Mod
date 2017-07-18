@@ -3,6 +3,8 @@ package com.mrbengonio.first;
 import com.mrbengonio.first.init.ModItems;
 import com.mrbengonio.first.proxy.CommonProxy;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -13,32 +15,36 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class First {
-	
+
 	@Instance
 	public static First instance;
-	
+
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
-	
+
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent event)
-	{
-		
+	public void preInit(FMLPreInitializationEvent event) {
+
 		ModItems.init();
 		ModItems.register();
 	}
-	
+
 	@EventHandler
-	public void Init(FMLInitializationEvent event)
-	{
-		
+	public void Init(FMLInitializationEvent event) {
+
 		proxy.init();
 	}
-	
-	@EventHandler
-	public void PostInit(FMLPostInitializationEvent event)
-	{
-		
-	}
-}
 
+	@EventHandler
+	public void PostInit(FMLPostInitializationEvent event) {
+
+	}
+
+	public static CreativeTabs tabFirst = new CreativeTabs("tab_first") {
+
+		@Override
+		public ItemStack getTabIconItem() {
+			return new ItemStack(ModItems.obsidianingot);
+		}
+	};
+}
