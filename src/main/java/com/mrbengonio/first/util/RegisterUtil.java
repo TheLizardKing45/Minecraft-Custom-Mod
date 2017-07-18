@@ -16,7 +16,7 @@ public class RegisterUtil {
 	// register it here
 	public static void registerAll(FMLPreInitializationEvent event) {
 		registerBlocks(event, Blocks.LukasBlock);
-		registerItems(event, Items.LukasItem, Items.testItem);
+		registerItems(event, Items.obsidianingot, Items.testItem);
 	}
 
 	// A method used to register blocks
