@@ -3,10 +3,9 @@ package com.mrbengonio.first;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.mrbengonio.first.handlers.CraftingHandler;
 import com.mrbengonio.first.proxy.CommonProxy;
 
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -34,6 +33,8 @@ public class First {
 	public void Init(FMLInitializationEvent event) {
 		LOGGER.info("Starting initialization");
 		proxy.init(event);
+		CraftingHandler.RegisterCrafting();
+		CraftingHandler.RegisterSmelting();
 	}
 
 	@Mod.EventHandler

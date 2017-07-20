@@ -1,7 +1,9 @@
 package com.mrbengonio.first.proxy;
 
+import com.mrbengonio.first.handlers.CommonEventHandler;
 import com.mrbengonio.first.util.RegisterUtil;
 
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -15,6 +17,7 @@ public class CommonProxy {
 	}
 
 	public void init(FMLInitializationEvent e) {
+		MinecraftForge.EVENT_BUS.register(new CommonEventHandler());
 	}
 
 	public void postInit(FMLPostInitializationEvent e) {
