@@ -17,7 +17,7 @@ public class RegisterUtil {
 	public static void registerAll(FMLPreInitializationEvent event) {
 		registerBlocks(event, Blocks.cupaliteOre, Blocks.kreuthilOre, Blocks.saspumOre, Blocks.xasmoOre);
 		registerItems(event, Items.obsidianingot, Items.cupaliteingot, Items.kreuthilingot, Items.saspumingot,
-				Items.xasmoingot);
+				Items.xasmoingot, Items.obsidianHelm, Items.obsidianChest, Items.obsidianlegs, Items.obsidianboots);
 	}
 
 	// A method used to register blocks
