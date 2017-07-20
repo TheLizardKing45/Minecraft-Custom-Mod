@@ -11,7 +11,7 @@ public class Items {
 	// Register Items
 
 	// Ingot
-	public static final Item obsidianingot = new ItemGenericItem("obsidianingot", CreativeTabsHandler.tabKreuthil, 16);
+	public static final Item obsidianingot = new ItemGenericItem("obsidianingot", CreativeTabsHandler.tabKreuthil, 64);
 	public static final Item cupaliteingot = new ItemQualityIngot("cupalite_ingot", CreativeTabsHandler.tabKreuthil, 16,
 			5);
 	public static final Item saspumingot = new ItemQualityIngot("saspum_ingot", CreativeTabsHandler.tabKreuthil, 32, 5);
