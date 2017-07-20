@@ -18,3 +18,9 @@ tile.xasmoninium_ore.name=Xasmoninium Ore
 
 //Creative Tab
 itemGroup.kreuthil_items=Project Kreuthil
+
+
+
+//lore
+lore.quality.QUALITY=Quality
+lore.quality.UNKNOWN=UNKNOWN
