@@ -19,7 +19,11 @@ tile.xasmoninium_ore.name=Xasmoninium Ore
 //Creative Tab
 itemGroup.kreuthil_items=Project Kreuthil
 
-
+//Armor
+item.obsidian_boots.name=Obsidian Boots
+item.obsidian_leggings.name=Obsidian Leggings
+item.obsidian_chestplate.name=Obsidian Chestplate
+item.obsidian_helmet.name=Obsidian Helmet
 
 //lore
 lore.quality.QUALITY=Quality

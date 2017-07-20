@@ -2,7 +2,7 @@ package com.mrbengonio.first.init;
 
 import com.mrbengonio.first.handlers.ArmorMaterialHandler;
 import com.mrbengonio.first.handlers.CreativeTabsHandler;
-import com.mrbengonio.first.items.ItemGenericArmor;
+import com.mrbengonio.first.items.ArmorGenericArmor;
 import com.mrbengonio.first.items.ItemGenericItem;
 import com.mrbengonio.first.items.ItemQualityIngot;
 
@@ -24,13 +24,13 @@ public class Items {
 			5);
 
 	// Armor
-	public static final Item obsidianHelm = new ItemGenericArmor("obsidianHelm", CreativeTabsHandler.tabKreuthil,
+	public static final Item obsidianHelm = new ArmorGenericArmor("obsidian_helmet", CreativeTabsHandler.tabKreuthil,
 			ArmorMaterialHandler.obsidian, 0, EntityEquipmentSlot.HEAD);
-	public static final Item obsidianChest = new ItemGenericArmor("obsidianChest", CreativeTabsHandler.tabKreuthil,
-			ArmorMaterialHandler.obsidian, 0, EntityEquipmentSlot.CHEST);
-	public static final Item obsidianlegs = new ItemGenericArmor("obsidianLegs", CreativeTabsHandler.tabKreuthil,
+	public static final Item obsidianChest = new ArmorGenericArmor("obsidian_chestplate",
+			CreativeTabsHandler.tabKreuthil, ArmorMaterialHandler.obsidian, 0, EntityEquipmentSlot.CHEST);
+	public static final Item obsidianlegs = new ArmorGenericArmor("obsidian_leggings", CreativeTabsHandler.tabKreuthil,
 			ArmorMaterialHandler.obsidian, 1, EntityEquipmentSlot.LEGS);
-	public static final Item obsidianboots = new ItemGenericArmor("obsidianBoots", CreativeTabsHandler.tabKreuthil,
+	public static final Item obsidianboots = new ArmorGenericArmor("obsidian_boots", CreativeTabsHandler.tabKreuthil,
 			ArmorMaterialHandler.obsidian, 0, EntityEquipmentSlot.FEET);
 
 }

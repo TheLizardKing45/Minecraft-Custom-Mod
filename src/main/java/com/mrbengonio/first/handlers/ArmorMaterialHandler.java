@@ -5,6 +5,6 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class ArmorMaterialHandler {
-	public static final ArmorMaterial obsidian = EnumHelper.addArmorMaterial("Obsidian", "mfm:obsidian", 1500,
-			new int[] { 3, 3, 3, 3 }, 30, SoundEvents.ENTITY_HORSE_BREATHE, 3);
+	public static final ArmorMaterial obsidian = EnumHelper.addArmorMaterial("Obsidian", "mfm:obsidian", 5,
+			new int[] { 3, 8, 6, 3 }, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5F);
 }
