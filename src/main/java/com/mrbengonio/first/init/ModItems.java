@@ -13,7 +13,7 @@ import com.mrbengonio.first.items.tools.ItemGenericSword;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 
-public class Items {
+public class ModItems {
 
 	// Register Items
 
