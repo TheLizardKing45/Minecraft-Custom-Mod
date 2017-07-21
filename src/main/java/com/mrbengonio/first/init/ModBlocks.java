@@ -6,7 +6,7 @@ import com.mrbengonio.first.handlers.CreativeTabsHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class Blocks {
+public class ModBlocks {
 
 	// Register Blocks here
 
