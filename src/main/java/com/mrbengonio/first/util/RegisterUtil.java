@@ -1,7 +1,7 @@
 package com.mrbengonio.first.util;
 
-import com.mrbengonio.first.init.Blocks;
-import com.mrbengonio.first.init.Items;
+import com.mrbengonio.first.init.ModBlocks;
+import com.mrbengonio.first.init.ModItems;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -15,10 +15,10 @@ import net.minecraftforge.fml.relauncher.Side;
 public class RegisterUtil {
 	// register it here
 	public static void registerAll(FMLPreInitializationEvent event) {
-		registerBlocks(event, Blocks.cupaliteOre, Blocks.kreuthilOre, Blocks.saspumOre, Blocks.xasmoOre);
-		registerItems(event, Items.obsidianingot, Items.cupaliteingot, Items.kreuthilingot, Items.saspumingot,
-				Items.xasmoingot, Items.obsidianHelm, Items.obsidianChest, Items.obsidianlegs, Items.obsidianboots,
-				Items.obsidianPickaxe, Items.obsidianAxe, Items.obsidianSpade, Items.obsidianSword);
+		registerBlocks(event, ModBlocks.cupaliteOre, ModBlocks.kreuthilOre, ModBlocks.saspumOre, ModBlocks.xasmoOre);
+		registerItems(event, ModItems.obsidianingot, ModItems.cupaliteingot, ModItems.kreuthilingot, ModItems.saspumingot,
+				ModItems.xasmoingot, ModItems.obsidianHelm, ModItems.obsidianChest, ModItems.obsidianlegs, ModItems.obsidianboots,
+				ModItems.obsidianPickaxe, ModItems.obsidianAxe, ModItems.obsidianSpade, ModItems.obsidianSword);
 	}
 
 	// A method used to register blocks
