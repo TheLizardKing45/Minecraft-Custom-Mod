@@ -1,4 +1,4 @@
-//Items
+//Items//
 
 //Ingot
 item.obsidianingot.name=Obsidian Ingot
@@ -7,7 +7,20 @@ item.cupalite_ingot.name=Cupalite Ingot
 item.saspum_ingot.name=Saspum Ingot
 item.kreuthil_ingot.name=Kreuthil Ingot
 item.xasmoninium_ingot.name=Xasmoninium Ingot
-//Blocks
+
+//Armor
+item.obsidian_boots.name=Obsidian Boots
+item.obsidian_leggings.name=Obsidian Leggings
+item.obsidian_chestplate.name=Obsidian Chestplate
+item.obsidian_helmet.name=Obsidian Helmet
+
+//Items
+item.obsidian_pickaxe.name=Obsidian Pickaxe
+item.obsidian_axe.name=Obsidian Axe
+item.obsidian_spade.name=Obsidian Spade
+item.obsidian_sword.name=Obsidian Sword
+
+//Blocks//
 
 //Ores
 
@@ -16,15 +29,11 @@ tile.saspum_ore.name=Saspum Ore
 tile.kreuthil_ore.name=Kreuthil Ore
 tile.xasmoninium_ore.name=Xasmoninium Ore
 
-//Creative Tab
-itemGroup.kreuthil_items=Project Kreuthil
 
-//Armor
-item.obsidian_boots.name=Obsidian Boots
-item.obsidian_leggings.name=Obsidian Leggings
-item.obsidian_chestplate.name=Obsidian Chestplate
-item.obsidian_helmet.name=Obsidian Helmet
-
+//OTHER//
 //lore
 lore.quality.QUALITY=Quality
 lore.quality.UNKNOWN=UNKNOWN
+
+//Creative Tab
+itemGroup.kreuthil_items=Project Kreuthil

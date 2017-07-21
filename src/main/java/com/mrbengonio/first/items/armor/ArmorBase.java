@@ -1,4 +1,4 @@
-package com.mrbengonio.first.items;
+package com.mrbengonio.first.items.armor;
 
 import com.mrbengonio.first.handlers.CreativeTabsHandler;
 

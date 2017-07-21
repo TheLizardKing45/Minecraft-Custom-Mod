@@ -12,13 +12,13 @@ public class Blocks {
 
 	// Ores
 	public static final Block cupaliteOre = new BlockGenericBlock("cupalite_ore", Material.ROCK,
-			CreativeTabsHandler.tabKreuthil, 6F, 50F, "pickaxe", 3);
+			CreativeTabsHandler.tabKreuthil, 6F, 50F, "pickaxe", 4);
 	public static final Block saspumOre = new BlockGenericBlock("saspum_ore", Material.ROCK,
-			CreativeTabsHandler.tabKreuthil, 6F, 50F, "pickaxe", 3);
+			CreativeTabsHandler.tabKreuthil, 6F, 50F, "pickaxe", 4);
 	public static final Block kreuthilOre = new BlockGenericBlock("kreuthil_ore", Material.ROCK,
-			CreativeTabsHandler.tabKreuthil, 6F, 50F, "pickaxe", 3);
+			CreativeTabsHandler.tabKreuthil, 6F, 50F, "pickaxe", 4);
 	public static final Block xasmoOre = new BlockGenericBlock("xasmoninium_ore", Material.ROCK,
-			CreativeTabsHandler.tabKreuthil, 6F, 50F, "pickaxe", 3);
+			CreativeTabsHandler.tabKreuthil, 6F, 50F, "pickaxe", 4);
 
 	// Other Blocks
 }
