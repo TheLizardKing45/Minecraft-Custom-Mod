@@ -18,7 +18,6 @@ public class ModItems {
 	// Register Items
 
 	// Ingot
-	public static final Item obsidianingot = new ItemGenericItem("obsidianingot", CreativeTabsHandler.tabKreuthil, 64);
 	public static final Item cupaliteingot = new ItemQualityIngot("cupalite_ingot", CreativeTabsHandler.tabKreuthil, 16,
 			5);
 	public static final Item saspumingot = new ItemQualityIngot("saspum_ingot", CreativeTabsHandler.tabKreuthil, 32, 5);
@@ -26,6 +25,9 @@ public class ModItems {
 			5);
 	public static final Item xasmoingot = new ItemQualityIngot("xasmoninium_ingot", CreativeTabsHandler.tabKreuthil, 16,
 			5);
+
+	// Shards
+	public static final Item obsidianshard = new ItemGenericItem("obsidian_shard", CreativeTabsHandler.tabKreuthil, 64);
 
 	// Armor
 	public static final Item obsidianHelm = new ArmorGenericArmor("obsidian_helmet", CreativeTabsHandler.tabKreuthil,

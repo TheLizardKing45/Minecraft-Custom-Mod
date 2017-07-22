@@ -31,16 +31,16 @@ public class WorldGenOre implements IWorldGenerator {
 		// chanceToSpawn, miny, maxy, spawninblock
 
 		addOreSpawn(ModBlocks.kreuthilOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 12,
-				1 + random.nextInt(4), 13, 1, 10, BlockMatcher.forBlock(Blocks.STONE));
+				1 + random.nextInt(3), 13, 1, 10, BlockMatcher.forBlock(Blocks.STONE));
 
 		addOreSpawn(ModBlocks.cupaliteOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16,
-				2 + random.nextInt(7), 12, 16, 32, BlockMatcher.forBlock(Blocks.STONE));
+				2 + random.nextInt(5), 12, 16, 32, BlockMatcher.forBlock(Blocks.STONE));
 
 		addOreSpawn(ModBlocks.saspumOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 4, 20, 100, 200,
 				BlockMatcher.forBlock(Blocks.STONE));
 
 		addOreSpawn(ModBlocks.xasmoOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16,
-				1 + (random.nextInt(6)), 20, 32, 50, BlockMatcher.forBlock(Blocks.STONE));
+				1 + (random.nextInt(5)), 20, 32, 50, BlockMatcher.forBlock(Blocks.STONE));
 
 	}
 

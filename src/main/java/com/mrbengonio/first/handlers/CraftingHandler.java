@@ -7,7 +7,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.oredict.OreDictionary;
 
 public class CraftingHandler {
 
@@ -15,27 +14,27 @@ public class CraftingHandler {
 
 		// Armor
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.obsidianHelm), "OOO", "OXO", "XXX", 'O',
-				ModItems.obsidianingot);
+				ModItems.obsidianshard);
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.obsidianChest), "OXO", "OOO", "OOO", 'O',
-				ModItems.obsidianingot);
+				ModItems.obsidianshard);
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.obsidianlegs), "OOO", "OXO", "OXO", 'O',
-				ModItems.obsidianingot);
+				ModItems.obsidianshard);
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.obsidianboots), "XXX", "OXO", "OXO", 'O',
-				ModItems.obsidianingot);
+				ModItems.obsidianshard);
 
 		// Tools
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.obsidianAxe), "OOX", "OSX", "XSX", 'O',
-				ModItems.obsidianingot, 'S', Items.STICK);
+				ModItems.obsidianshard, 'S', Items.STICK);
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.obsidianPickaxe), "OOO", "XSX", "XSX", 'O',
-				ModItems.obsidianingot, 'S', Items.STICK);
+				ModItems.obsidianshard, 'S', Items.STICK);
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.obsidianSpade), "XOX", "XSX", "XSX", 'O',
-				ModItems.obsidianingot, 'S', Items.STICK);
+				ModItems.obsidianshard, 'S', Items.STICK);
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.obsidianSword), "XOX", "XOX", "XSX", 'O',
-				ModItems.obsidianingot, 'S', Items.STICK);
+				ModItems.obsidianshard, 'S', Items.STICK);
 
 		// Other
-		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.obsidianingot, 4), Blocks.OBSIDIAN,
-				new ItemStack(Items.DIAMOND_PICKAXE, 1, OreDictionary.WILDCARD_VALUE));
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.OBSIDIAN, 1), ModItems.obsidianshard,
+				ModItems.obsidianshard, ModItems.obsidianshard, ModItems.obsidianshard);
 
 	}
 

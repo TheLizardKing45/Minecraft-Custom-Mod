@@ -4,7 +4,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.mrbengonio.first.handlers.CraftingHandler;
-import com.mrbengonio.first.init.ModCrafting;
 import com.mrbengonio.first.proxy.CommonProxy;
 
 import net.minecraftforge.fml.common.Mod;
@@ -36,7 +35,6 @@ public class First {
 		proxy.init(event);
 		CraftingHandler.RegisterCrafting();
 		CraftingHandler.RegisterSmelting();
-		ModCrafting.register();
 	}
 
 	@Mod.EventHandler

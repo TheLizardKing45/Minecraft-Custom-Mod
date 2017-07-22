@@ -9,7 +9,7 @@ public class CreativeTabsHandler {
 	public static final CreativeTabs tabKreuthil = new CreativeTabs("kreuthil_items") {
 		@Override
 		public ItemStack getTabIconItem() {
-			return new ItemStack(ModItems.obsidianingot);
+			return new ItemStack(ModItems.obsidianshard);
 		}
 	};
 
