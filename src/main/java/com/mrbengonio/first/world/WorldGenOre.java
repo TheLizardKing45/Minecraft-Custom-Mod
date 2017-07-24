@@ -34,7 +34,7 @@ public class WorldGenOre implements IWorldGenerator {
 				1 + random.nextInt(3), 13, 1, 10, BlockMatcher.forBlock(Blocks.STONE));
 
 		addOreSpawn(ModBlocks.cupaliteOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16,
-				2 + random.nextInt(5), 12, 16, 32, BlockMatcher.forBlock(Blocks.STONE));
+				2 + random.nextInt(8), 12, 16, 32, BlockMatcher.forBlock(Blocks.STONE));
 
 		addOreSpawn(ModBlocks.saspumOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 4, 20, 100, 200,
 				BlockMatcher.forBlock(Blocks.STONE));

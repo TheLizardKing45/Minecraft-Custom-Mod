@@ -1,5 +1,6 @@
 package com.mrbengonio.first.handlers;
 
+import com.mrbengonio.first.crafting.TechCraftingManager;
 import com.mrbengonio.first.init.ModBlocks;
 import com.mrbengonio.first.init.ModItems;
 
@@ -35,6 +36,13 @@ public class CraftingHandler {
 		// Other
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.OBSIDIAN, 1), ModItems.obsidianshard,
 				ModItems.obsidianshard, ModItems.obsidianshard, ModItems.obsidianshard);
+
+		// Tech Crafting
+		// GameRegistry.addRecipe(new ItemStack(Blocks.OBSIDIAN, 1), "O", "O", "O", 'O',
+		// ModItems.obsidianshard);
+
+		TechCraftingManager.AddRecipe(new ItemStack(ModItems.CupaliteCog, 1), " C ", "C C", " C ", 'C',
+				ModItems.cupaliteingot);
 
 	}
 
