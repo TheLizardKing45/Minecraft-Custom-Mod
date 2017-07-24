@@ -13,11 +13,11 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemQualityIngot extends ItemBase {
+public class ItemTechIngot extends ItemBase {
 
 	int MaxQuality;
 
-	public ItemQualityIngot(String name, CreativeTabs tab, int maxSize, int maxQuality) {
+	public ItemTechIngot(String name, CreativeTabs tab, int maxSize, int maxQuality) {
 		super(name, tab, maxSize);
 		MaxQuality = maxQuality;
 	}
@@ -43,7 +43,8 @@ public class ItemQualityIngot extends ItemBase {
 			Random rn = new Random();
 			nbt = new NBTTagCompound();
 			// Set NBT Quality data
-			nbt.setInteger("Quality", rn.nextInt(MaxQuality - 1 + 1) + 1);
+			nbt.setInteger("Quality", rn.nextInt(MaxQuality) + 1);
+			nbt.setInteger("MaxQuality", MaxQuality);
 			stack.setTagCompound(nbt);
 
 			// re-adds the deleted items as a new itemstack!
@@ -51,20 +52,20 @@ public class ItemQualityIngot extends ItemBase {
 				// spawns item drop if inventory is full
 				if (!world.isRemote)
 					player.entityDropItem(new ItemStack(stack.getItem(), stackSize), 0F);
-
 			}
-		}
 
+		}
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> lores, boolean advanced) {
-		if (stack.hasTagCompound() && stack.getTagCompound().hasKey("Quality")) {
+		if (stack.hasTagCompound() && stack.getTagCompound().hasKey("Quality")
+				&& stack.getTagCompound().getInteger("MaxQuality") > 0) {
 			lores.add(I18n.format("lore.quality.QUALITY") + ": "
 					+ Integer.toString(stack.getTagCompound().getInteger("Quality")) + "/"
-					+ Integer.toString(MaxQuality));
+					+ Integer.toString(stack.getTagCompound().getInteger("MaxQuality")));
 		} else {
 			lores.add(I18n.format("lore.quality.QUALITY") + ": " + I18n.format("lore.quality.UNKNOWN"));
 		}

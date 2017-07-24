@@ -3,7 +3,8 @@ package com.mrbengonio.first.init;
 import com.mrbengonio.first.handlers.CreativeTabsHandler;
 import com.mrbengonio.first.handlers.MaterialHandler;
 import com.mrbengonio.first.items.ItemGenericItem;
-import com.mrbengonio.first.items.ItemQualityIngot;
+import com.mrbengonio.first.items.ItemTechComponent;
+import com.mrbengonio.first.items.ItemTechIngot;
 import com.mrbengonio.first.items.armor.ArmorGenericArmor;
 import com.mrbengonio.first.items.tools.ItemGenericAxe;
 import com.mrbengonio.first.items.tools.ItemGenericPickaxe;
@@ -18,13 +19,16 @@ public class ModItems {
 	// Register Items
 
 	// Ingot
-	public static final Item cupaliteingot = new ItemQualityIngot("cupalite_ingot", CreativeTabsHandler.tabKreuthil, 16,
+	public static final Item cupaliteingot = new ItemTechIngot("cupalite_ingot", CreativeTabsHandler.tabKreuthil, 16,
 			5);
-	public static final Item saspumingot = new ItemQualityIngot("saspum_ingot", CreativeTabsHandler.tabKreuthil, 32, 5);
-	public static final Item kreuthilingot = new ItemQualityIngot("kreuthil_ingot", CreativeTabsHandler.tabKreuthil, 16,
+	public static final Item saspumingot = new ItemTechIngot("saspum_ingot", CreativeTabsHandler.tabKreuthil, 32, 5);
+	public static final Item kreuthilingot = new ItemTechIngot("kreuthil_ingot", CreativeTabsHandler.tabKreuthil, 16,
 			5);
-	public static final Item xasmoingot = new ItemQualityIngot("xasmoninium_ingot", CreativeTabsHandler.tabKreuthil, 16,
+	public static final Item xasmoingot = new ItemTechIngot("xasmoninium_ingot", CreativeTabsHandler.tabKreuthil, 16,
 			5);
+
+	// Tech Components
+	public static final Item CupaliteCog = new ItemTechComponent("Cupalite_cog", CreativeTabsHandler.tabKreuthil, 64);
 
 	// Shards
 	public static final Item obsidianshard = new ItemGenericItem("obsidian_shard", CreativeTabsHandler.tabKreuthil, 64);
