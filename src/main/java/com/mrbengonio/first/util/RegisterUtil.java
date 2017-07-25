@@ -19,7 +19,8 @@ public class RegisterUtil {
 		registerItems(event, ModItems.obsidianshard, ModItems.cupaliteingot, ModItems.kreuthilingot,
 				ModItems.saspumingot, ModItems.xasmoingot, ModItems.obsidianHelm, ModItems.obsidianChest,
 				ModItems.obsidianlegs, ModItems.obsidianboots, ModItems.obsidianPickaxe, ModItems.obsidianAxe,
-				ModItems.obsidianSpade, ModItems.obsidianSword, ModItems.CupaliteCog);
+				ModItems.obsidianSpade, ModItems.obsidianSword, ModItems.CupaliteCog, ModItems.saspumBallBearing,
+				ModItems.saspumBearingBall, ModItems.GearBox, ModItems.Iron_BearingCasing);
 	}
 
 	// A method used to register blocks

@@ -30,6 +30,18 @@ public class ModItems {
 	// Tech Components
 	public static final Item CupaliteCog = new ItemTechComponent("Cupalite_cog", CreativeTabsHandler.tabKreuthil, 64);
 
+	public static final Item saspumBearingBall = new ItemTechComponent("saspum_bearingball",
+			CreativeTabsHandler.tabKreuthil, 64);
+
+	public static final Item saspumBallBearing = new ItemTechComponent("saspum_ballbearing",
+			CreativeTabsHandler.tabKreuthil, 32);
+
+	public static final Item GearBox = new ItemTechComponent("gearbox", CreativeTabsHandler.tabKreuthil, 8);
+
+	// Components
+	public static final Item Iron_BearingCasing = new ItemGenericItem("iron_bearingcasing",
+			CreativeTabsHandler.tabKreuthil, 32);
+
 	// Shards
 	public static final Item obsidianshard = new ItemGenericItem("obsidian_shard", CreativeTabsHandler.tabKreuthil, 64);
 

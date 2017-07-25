@@ -2,8 +2,6 @@ package com.mrbengonio.first.crafting;
 
 import java.util.Random;
 
-import com.mrbengonio.first.First;
-
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.ShapedRecipes;
@@ -28,13 +26,14 @@ public class TechCraftingShaped extends ShapedRecipes {
 				if (item.hasTagCompound() && item.getTagCompound().hasKey("Quality")) {
 					number++;
 					quality += item.getTagCompound().getInteger("Quality");
-					First.LOGGER.info("Added item for quality, quality: " + quality + ", number: " + number);
 				}
 			}
 		}
-		average = (quality / number);
+		if (number != 0)
+			average = (quality / number);
+		else
+			average = 0;
 
-		First.LOGGER.info("Average: " + average);
 		if (!result.hasTagCompound()) {
 			Random rn = new Random();
 			// Set NBT Quality data
