@@ -44,6 +44,17 @@ public class CraftingHandler {
 		TechCraftingManager.AddRecipe(new ItemStack(ModItems.CupaliteCog, 1), " C ", "C C", " C ", 'C',
 				ModItems.cupaliteingot);
 
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.Iron_BearingCasing, 2), "III", "I I", "III", 'I',
+				Items.IRON_INGOT);
+
+		TechCraftingManager.addShapelessRecipe(new ItemStack(ModItems.saspumBearingBall), ModItems.saspumingot);
+
+		TechCraftingManager.AddRecipe(new ItemStack(ModItems.saspumBallBearing), "BBB", "BCB", "BBB", 'B',
+				ModItems.saspumBearingBall, 'C', ModItems.Iron_BearingCasing);
+
+		TechCraftingManager.AddRecipe(new ItemStack(ModItems.GearBox), "IGI", "BGB", "IGI", 'I', Items.IRON_INGOT, 'G',
+				ModItems.CupaliteCog, 'B', ModItems.saspumBallBearing);
+
 	}
 
 	public static void RegisterSmelting() {
