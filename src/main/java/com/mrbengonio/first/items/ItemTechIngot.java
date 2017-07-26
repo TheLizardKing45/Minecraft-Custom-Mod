@@ -1,5 +1,7 @@
 package com.mrbengonio.first.items;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.List;
 import java.util.Random;
 
@@ -43,7 +45,7 @@ public class ItemTechIngot extends ItemBase {
 			Random rn = new Random();
 			nbt = new NBTTagCompound();
 			// Set NBT Quality data
-			nbt.setInteger("Quality", rn.nextInt(MaxQuality) + 1);
+			nbt.setFloat("Quality", rn.nextInt(MaxQuality) + 1);
 			nbt.setInteger("MaxQuality", MaxQuality);
 			stack.setTagCompound(nbt);
 
@@ -63,9 +65,10 @@ public class ItemTechIngot extends ItemBase {
 	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> lores, boolean advanced) {
 		if (stack.hasTagCompound() && stack.getTagCompound().hasKey("Quality")
 				&& stack.getTagCompound().getInteger("MaxQuality") > 0) {
-			lores.add(I18n.format("lore.quality.QUALITY") + ": "
-					+ Integer.toString(stack.getTagCompound().getInteger("Quality")) + "/"
-					+ Integer.toString(stack.getTagCompound().getInteger("MaxQuality")));
+			NumberFormat nf = new DecimalFormat("##.###");
+
+			lores.add(I18n.format("lore.quality.QUALITY") + ": " + nf.format(stack.getTagCompound().getFloat("Quality"))
+					+ "/" + Integer.toString(stack.getTagCompound().getInteger("MaxQuality")));
 		} else {
 			lores.add(I18n.format("lore.quality.QUALITY") + ": " + I18n.format("lore.quality.UNKNOWN"));
 		}

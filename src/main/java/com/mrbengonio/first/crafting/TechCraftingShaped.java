@@ -18,14 +18,15 @@ public class TechCraftingShaped extends ShapedRecipes {
 		ItemStack result = super.getRecipeOutput().copy();
 		NBTTagCompound nbt = new NBTTagCompound();
 
-		int number = 0, quality = 0, average = 0;
+		int number = 0;
+		float quality = 0, average = 0;
 
 		for (int j = 0; j < inv.getSizeInventory(); ++j) {
 			ItemStack item = inv.getStackInSlot(j);
 			if (!item.isEmpty()) {
 				if (item.hasTagCompound() && item.getTagCompound().hasKey("Quality")) {
 					number++;
-					quality += item.getTagCompound().getInteger("Quality");
+					quality += item.getTagCompound().getFloat("Quality");
 				}
 			}
 		}
@@ -37,7 +38,7 @@ public class TechCraftingShaped extends ShapedRecipes {
 		if (!result.hasTagCompound()) {
 			Random rn = new Random();
 			// Set NBT Quality data
-			nbt.setInteger("Quality", average);
+			nbt.setFloat("Quality", average);
 			nbt.setInteger("MaxQuality", 5);
 			result.setTagCompound(nbt);
 		}
