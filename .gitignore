@@ -1,22 +1,61 @@
-# eclipse
-bin
-*.launch
-.settings
-.metadata
-.classpath
+## Based on GitHub's Eclipse .gitignore
+eclipse/
+*.pydevproject
 .project
-
-# idea
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
 out
 *.ipr
 *.iws
 *.iml
 .idea
-
-# gradle
 build
 .gradle
-
-# other
 eclipse
 run
+*.bat
+*.sh
+*.log*
+.externalToolBuilders/
+*.launch
+.cproject
+.buildpath
+CHANGELOG
+LICENSE.txt
+/debug*
+conf/
+config/
+coremods/
+crash-reports/
+docs/
+jars/
+lib/
+logs/
+reobf/
+runtime/
+mods/
+saves/
+stats/
+temp/
+texturepacks/
+options.txt
+run/
+.gradle/
+build/
+gradle-app.setting
+# eclipse
+bin
+.settings
+usercache.json
+usernamecache.json
+# Minecraft
+minecraft

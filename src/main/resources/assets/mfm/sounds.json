@@ -4,7 +4,7 @@
         "subtitle": "item.Elvis1.play",
         "sounds": [ 
             { 
-                "name": "mfm:item/Elvis1/play", 
+                "name": "mfm:music/elvis1", 
                 "stream": true 
             } 
        ]
