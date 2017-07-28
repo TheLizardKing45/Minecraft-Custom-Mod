@@ -6,6 +6,7 @@ import com.mrbengonio.first.items.ItemGenericItem;
 import com.mrbengonio.first.items.ItemTechComponent;
 import com.mrbengonio.first.items.ItemTechIngot;
 import com.mrbengonio.first.items.armor.ArmorGenericArmor;
+import com.mrbengonio.first.items.records.ItemGenericRecord;
 import com.mrbengonio.first.items.tools.ItemGenericAxe;
 import com.mrbengonio.first.items.tools.ItemGenericPickaxe;
 import com.mrbengonio.first.items.tools.ItemGenericSpade;
@@ -65,4 +66,7 @@ public class ModItems {
 	public static final Item obsidianSword = new ItemGenericSword("obsidian_sword", CreativeTabsHandler.tabKreuthil,
 			MaterialHandler.obsidianTool);
 
+	// Other
+	public static final Item miraclerecord = new ItemGenericRecord("miracle_record", ModSounds.miracle,
+			"Are You Ready For A Miracle?", "Patti LaBelle");
 }

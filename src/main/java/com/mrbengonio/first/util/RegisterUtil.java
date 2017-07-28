@@ -2,11 +2,13 @@ package com.mrbengonio.first.util;
 
 import com.mrbengonio.first.init.ModBlocks;
 import com.mrbengonio.first.init.ModItems;
+import com.mrbengonio.first.init.ModSounds;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -20,7 +22,8 @@ public class RegisterUtil {
 				ModItems.saspumingot, ModItems.xasmoingot, ModItems.obsidianHelm, ModItems.obsidianChest,
 				ModItems.obsidianlegs, ModItems.obsidianboots, ModItems.obsidianPickaxe, ModItems.obsidianAxe,
 				ModItems.obsidianSpade, ModItems.obsidianSword, ModItems.CupaliteCog, ModItems.saspumBallBearing,
-				ModItems.saspumBearingBall, ModItems.GearBox, ModItems.Iron_BearingCasing);
+				ModItems.saspumBearingBall, ModItems.GearBox, ModItems.Iron_BearingCasing, ModItems.miraclerecord);
+		registerSounds(event, ModSounds.miracle);
 	}
 
 	// A method used to register blocks
@@ -45,6 +48,12 @@ public class RegisterUtil {
 						new ModelResourceLocation(item.getRegistryName(), "inventory"));
 			}
 
+		}
+	}
+
+	private static void registerSounds(FMLPreInitializationEvent event, SoundEvent... sounds) {
+		for (SoundEvent sound : sounds) {
+			GameRegistry.register(sound, sound.getSoundName());
 		}
 	}
 
