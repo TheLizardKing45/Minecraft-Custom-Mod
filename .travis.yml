@@ -1,42 +1,42 @@
-# Tell Travis this is a Java project.
+branches:
+  except:
+  - "/^*-v[0-9]/"
 language: java
-
-# Tell Travis this is a Java 8 project.
 matrix:
   include:
-    - jdk: oraclejdk8
-
-# Tell Travis we want container-based builds.
+  - jdk: oraclejdk8
 sudo: false
-
-# Use the gradle wrapper for 2.7 instead of default 2.2
 before_install:
-  - chmod +x gradlew
-  
-  # Prepare the workspace.
+- chmod +x gradlew
 install:
-  - ./gradlew setupCIWorkspace -S
-
-# Build the Project.
+- "./gradlew setupCIWorkspace -S"
 script:
-  - ./gradlew build -S
-  
-  # Clean up after Gradle
+- "./gradlew build -S"
 env:
-  global:
-    TERM=dumb
-    
-    # So the cache doesn't get rebuilt every time.
+  global: TERM=dumb
+before_deploy:
+- git config --global user.email "builds@travis-ci.com"
+- git config --global user.name "Travis CI"
+- export GIT_TAG=$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER
+- git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
+- git push -q https://$TAGPERM@github.com/TheLizardKing45/Project-Kreuthil --tags
+- ls -R
+deploy:
+  provider: releases
+  api_key:
+    secure: gR3yDdp+YRFj9jQaIg7Xmr5SvAdj+q5NYKikQXD5PAjnXQgO7aBG8pTORhJt20SL7YxJTWMdy8n6tdT/Wyyvgidf7AwKoL37JQH44Zgrv61q5a/Kqyfzkss2pb8w3Bc0/bE2dCwQ3pBVM/W1s6gGXCKOdz2MwYmt/xDeqaH35uLxF/2wYAIpnzEirg99AECI3E16KKTqFyTD/13NHQjHDIUWbfqOui4pp5yyBlrK28AS25PoX87dO1DUH3+JDAxQmKkkFx2z/FDrHI8Qhhd57qxavvx2nftulutrVhkpjgsscDY76M33iGeDPuE4Tog1cyx7dnAqXNjizX5aYsUV3GUXHXqeBZ4vnD5dmj4ENXTWZda+fsxdEq8vFF9nc0g7eXnk5HvfXzUgWdgCSXnALoWm7BBtCwiYewWJtE4nUUcqjoTAArfWTR8v3roGpTBSkzz3LQs/gXkwrvoy8PBn2u17EoPqT47tp8bV+VzRviWXr5atOTnSXx1xP9MigmicDMZtMD4KThwUQl1ZmYRseVeMfke4dnfCEGjxWzY/bgeTDvEBV1a9taYfmRfyWwTW2HE4qqEBfj8OiZBKZKcH40TrcpI+aecFR7fAtwCL8LXrf9BROX2mgzmk8h5xQT0rt29gSaIth1I5nicpqXBKsB8QrVE6tSUIFT1sTrKMD+o=
+  file: build/libs/*
+  skip_cleanup: true      
+  on:
+    repo: TheLizardKing45/Project-Kreuthil
+  tags: true
 before_cache:
-  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -f $HOME/.gradle/caches/minecraft/ForgeVersion.json
-  - rm -f $HOME/.gradle/caches/minecraft/ForgeVersion.json.etag
-  - rm -rf $HOME/.gradle/caches/minecraft/deobfedDeps
-
-# Cache libs, as to improve speed.
+- rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -f $HOME/.gradle/caches/minecraft/ForgeVersion.json
+- rm -f $HOME/.gradle/caches/minecraft/ForgeVersion.json.etag
+- rm -rf $HOME/.gradle/caches/minecraft/deobfedDeps
 cache:
   directories:
-    - ./libs
-    - $HOME/.gradle/caches
-    # So gradle isn't downloaded every time.
-    - $HOME/.gradle/wrapper
+  - "./libs"
+  - "$HOME/.gradle/caches"
+  - "$HOME/.gradle/wrapper"
