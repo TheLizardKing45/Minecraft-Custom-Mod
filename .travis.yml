@@ -1,3 +1,7 @@
+branches:
+  only:
+    - master
+    - develop
 language: java
 matrix:
   include:
@@ -21,30 +25,25 @@ before_deploy:
 - git push -q https://$TAGPERM@github.com/TheLizardKing45/Project-Kreuthil --tags
 - ls -R
 deploy:
-  provider: releases
-  api_key:
-    secure: gR3yDdp+YRFj9jQaIg7Xmr5SvAdj+q5NYKikQXD5PAjnXQgO7aBG8pTORhJt20SL7YxJTWMdy8n6tdT/Wyyvgidf7AwKoL37JQH44Zgrv61q5a/Kqyfzkss2pb8w3Bc0/bE2dCwQ3pBVM/W1s6gGXCKOdz2MwYmt/xDeqaH35uLxF/2wYAIpnzEirg99AECI3E16KKTqFyTD/13NHQjHDIUWbfqOui4pp5yyBlrK28AS25PoX87dO1DUH3+JDAxQmKkkFx2z/FDrHI8Qhhd57qxavvx2nftulutrVhkpjgsscDY76M33iGeDPuE4Tog1cyx7dnAqXNjizX5aYsUV3GUXHXqeBZ4vnD5dmj4ENXTWZda+fsxdEq8vFF9nc0g7eXnk5HvfXzUgWdgCSXnALoWm7BBtCwiYewWJtE4nUUcqjoTAArfWTR8v3roGpTBSkzz3LQs/gXkwrvoy8PBn2u17EoPqT47tp8bV+VzRviWXr5atOTnSXx1xP9MigmicDMZtMD4KThwUQl1ZmYRseVeMfke4dnfCEGjxWzY/bgeTDvEBV1a9taYfmRfyWwTW2HE4qqEBfj8OiZBKZKcH40TrcpI+aecFR7fAtwCL8LXrf9BROX2mgzmk8h5xQT0rt29gSaIth1I5nicpqXBKsB8QrVE6tSUIFT1sTrKMD+o=
-  file_glob: true
-  file: build/libs/*
-  skip_cleanup: true
-  on:
-    repo: TheLizardKing45/Project-Kreuthil
-    branch: master
-deploy:
-  provider: releases
-  prerelease: true
-  api_key:
-    secure: gR3yDdp+YRFj9jQaIg7Xmr5SvAdj+q5NYKikQXD5PAjnXQgO7aBG8pTORhJt20SL7YxJTWMdy8n6tdT/Wyyvgidf7AwKoL37JQH44Zgrv61q5a/Kqyfzkss2pb8w3Bc0/bE2dCwQ3pBVM/W1s6gGXCKOdz2MwYmt/xDeqaH35uLxF/2wYAIpnzEirg99AECI3E16KKTqFyTD/13NHQjHDIUWbfqOui4pp5yyBlrK28AS25PoX87dO1DUH3+JDAxQmKkkFx2z/FDrHI8Qhhd57qxavvx2nftulutrVhkpjgsscDY76M33iGeDPuE4Tog1cyx7dnAqXNjizX5aYsUV3GUXHXqeBZ4vnD5dmj4ENXTWZda+fsxdEq8vFF9nc0g7eXnk5HvfXzUgWdgCSXnALoWm7BBtCwiYewWJtE4nUUcqjoTAArfWTR8v3roGpTBSkzz3LQs/gXkwrvoy8PBn2u17EoPqT47tp8bV+VzRviWXr5atOTnSXx1xP9MigmicDMZtMD4KThwUQl1ZmYRseVeMfke4dnfCEGjxWzY/bgeTDvEBV1a9taYfmRfyWwTW2HE4qqEBfj8OiZBKZKcH40TrcpI+aecFR7fAtwCL8LXrf9BROX2mgzmk8h5xQT0rt29gSaIth1I5nicpqXBKsB8QrVE6tSUIFT1sTrKMD+o=
-  file_glob: true
-  file: build/libs/*
-  skip_cleanup: true
-  on:
-    repo: TheLizardKing45/Project-Kreuthil
-    branch: develop
-
-branches:
-  only:
-    - master
+ - provider: releases
+   api_key:
+     secure: gR3yDdp+YRFj9jQaIg7Xmr5SvAdj+q5NYKikQXD5PAjnXQgO7aBG8pTORhJt20SL7YxJTWMdy8n6tdT/Wyyvgidf7AwKoL37JQH44Zgrv61q5a/Kqyfzkss2pb8w3Bc0/bE2dCwQ3pBVM/W1s6gGXCKOdz2MwYmt/xDeqaH35uLxF/2wYAIpnzEirg99AECI3E16KKTqFyTD/13NHQjHDIUWbfqOui4pp5yyBlrK28AS25PoX87dO1DUH3+JDAxQmKkkFx2z/FDrHI8Qhhd57qxavvx2nftulutrVhkpjgsscDY76M33iGeDPuE4Tog1cyx7dnAqXNjizX5aYsUV3GUXHXqeBZ4vnD5dmj4ENXTWZda+fsxdEq8vFF9nc0g7eXnk5HvfXzUgWdgCSXnALoWm7BBtCwiYewWJtE4nUUcqjoTAArfWTR8v3roGpTBSkzz3LQs/gXkwrvoy8PBn2u17EoPqT47tp8bV+VzRviWXr5atOTnSXx1xP9MigmicDMZtMD4KThwUQl1ZmYRseVeMfke4dnfCEGjxWzY/bgeTDvEBV1a9taYfmRfyWwTW2HE4qqEBfj8OiZBKZKcH40TrcpI+aecFR7fAtwCL8LXrf9BROX2mgzmk8h5xQT0rt29gSaIth1I5nicpqXBKsB8QrVE6tSUIFT1sTrKMD+o=
+   file_glob: true
+   file: build/libs/*
+   skip_cleanup: true
+   on:
+     repo: TheLizardKing45/Project-Kreuthil
+     branch: master
+ - provider: releases
+   prerelease: true
+   api_key:
+     secure: gR3yDdp+YRFj9jQaIg7Xmr5SvAdj+q5NYKikQXD5PAjnXQgO7aBG8pTORhJt20SL7YxJTWMdy8n6tdT/Wyyvgidf7AwKoL37JQH44Zgrv61q5a/Kqyfzkss2pb8w3Bc0/bE2dCwQ3pBVM/W1s6gGXCKOdz2MwYmt/xDeqaH35uLxF/2wYAIpnzEirg99AECI3E16KKTqFyTD/13NHQjHDIUWbfqOui4pp5yyBlrK28AS25PoX87dO1DUH3+JDAxQmKkkFx2z/FDrHI8Qhhd57qxavvx2nftulutrVhkpjgsscDY76M33iGeDPuE4Tog1cyx7dnAqXNjizX5aYsUV3GUXHXqeBZ4vnD5dmj4ENXTWZda+fsxdEq8vFF9nc0g7eXnk5HvfXzUgWdgCSXnALoWm7BBtCwiYewWJtE4nUUcqjoTAArfWTR8v3roGpTBSkzz3LQs/gXkwrvoy8PBn2u17EoPqT47tp8bV+VzRviWXr5atOTnSXx1xP9MigmicDMZtMD4KThwUQl1ZmYRseVeMfke4dnfCEGjxWzY/bgeTDvEBV1a9taYfmRfyWwTW2HE4qqEBfj8OiZBKZKcH40TrcpI+aecFR7fAtwCL8LXrf9BROX2mgzmk8h5xQT0rt29gSaIth1I5nicpqXBKsB8QrVE6tSUIFT1sTrKMD+o=
+   file_glob: true
+   file: build/libs/*
+   skip_cleanup: true
+   on:
+     repo: TheLizardKing45/Project-Kreuthil
+     branch: develop
 before_cache:
 - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 - rm -f $HOME/.gradle/caches/minecraft/ForgeVersion.json
