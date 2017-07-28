@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.mrbengonio.first.handlers.CraftingHandler;
+import com.mrbengonio.first.handlers.MFMSoundHandler;
 import com.mrbengonio.first.init.ModCrafting;
 import com.mrbengonio.first.proxy.CommonProxy;
 
@@ -37,6 +38,7 @@ public class First {
 		CraftingHandler.RegisterCrafting();
 		CraftingHandler.RegisterSmelting();
 		ModCrafting.register();
+		MFMSoundHandler.init();
 	}
 
 	@Mod.EventHandler

@@ -1,0 +1,12 @@
+{
+    "item.Elvis1.play": {
+        "category": "records",
+        "subtitle": "item.Elvis1.play",
+        "sounds": [ 
+            { 
+                "name": "mfm:item/Elvis1/play", 
+                "stream": true 
+            } 
+       ]
+    }
+}

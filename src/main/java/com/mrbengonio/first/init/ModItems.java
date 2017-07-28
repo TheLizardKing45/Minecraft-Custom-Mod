@@ -1,10 +1,12 @@
 package com.mrbengonio.first.init;
 
 import com.mrbengonio.first.handlers.CreativeTabsHandler;
+import com.mrbengonio.first.handlers.MFMSoundHandler;
 import com.mrbengonio.first.handlers.MaterialHandler;
 import com.mrbengonio.first.items.ItemGenericItem;
 import com.mrbengonio.first.items.ItemQualityIngot;
 import com.mrbengonio.first.items.armor.ArmorGenericArmor;
+import com.mrbengonio.first.items.records.ItemGenericRecord;
 import com.mrbengonio.first.items.tools.ItemGenericAxe;
 import com.mrbengonio.first.items.tools.ItemGenericPickaxe;
 import com.mrbengonio.first.items.tools.ItemGenericSpade;
@@ -47,4 +49,7 @@ public class ModItems {
 	public static final Item obsidianSword = new ItemGenericSword("obsidian_sword", CreativeTabsHandler.tabKreuthil,
 			MaterialHandler.obsidianTool);
 
+	// Other
+	public static final Item Elvis1 = new ItemGenericRecord("Elvis1", CreativeTabsHandler.tabKreuthil,
+			MFMSoundHandler.ITEM_ELVIS1_PLAY);
 }

@@ -31,6 +31,9 @@ tile.xasmoninium_ore.name=Xasmoninium Ore
 
 
 //OTHER//
+
+item.Elvis1.name=Music Disc
+item.record.Elvis1.desc=Elvis Presley - Can't help falling in love
 //lore
 lore.quality.QUALITY=Quality
 lore.quality.UNKNOWN=UNKNOWN
