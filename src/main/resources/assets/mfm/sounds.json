@@ -1,10 +1,10 @@
 {
-    "item.Elvis1.play": {
+    "miracle": {
         "category": "records",
-        "subtitle": "item.Elvis1.play",
+        "subtitle": "miracle",
         "sounds": [ 
             { 
-                "name": "mfm:music/elvis1", 
+                "name": "mfm:music/miracle", 
                 "stream": true 
             } 
        ]

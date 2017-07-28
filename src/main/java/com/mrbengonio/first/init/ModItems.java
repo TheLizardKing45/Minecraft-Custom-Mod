@@ -5,7 +5,7 @@ import com.mrbengonio.first.handlers.MaterialHandler;
 import com.mrbengonio.first.items.ItemGenericItem;
 import com.mrbengonio.first.items.ItemQualityIngot;
 import com.mrbengonio.first.items.armor.ArmorGenericArmor;
-import com.mrbengonio.first.items.records.ItemGenericRecordRemake;
+import com.mrbengonio.first.items.records.ItemGenericRecord;
 import com.mrbengonio.first.items.tools.ItemGenericAxe;
 import com.mrbengonio.first.items.tools.ItemGenericPickaxe;
 import com.mrbengonio.first.items.tools.ItemGenericSpade;
@@ -49,5 +49,6 @@ public class ModItems {
 			MaterialHandler.obsidianTool);
 
 	// Other
-	public static final Item Elvis1 = new ItemGenericRecordRemake("Elvis1", ModSounds.elvis1);
+	public static final Item miraclerecord = new ItemGenericRecord("miracle_record", ModSounds.miracle,
+			"Are You Ready For A Miracle?", "Patti LaBelle");
 }

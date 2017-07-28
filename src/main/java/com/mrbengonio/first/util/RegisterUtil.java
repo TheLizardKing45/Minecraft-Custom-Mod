@@ -21,8 +21,8 @@ public class RegisterUtil {
 		registerItems(event, ModItems.obsidianingot, ModItems.cupaliteingot, ModItems.kreuthilingot,
 				ModItems.saspumingot, ModItems.xasmoingot, ModItems.obsidianHelm, ModItems.obsidianChest,
 				ModItems.obsidianlegs, ModItems.obsidianboots, ModItems.obsidianPickaxe, ModItems.obsidianAxe,
-				ModItems.obsidianSpade, ModItems.obsidianSword, ModItems.Elvis1);
-		registerSounds(event, ModSounds.elvis1);
+				ModItems.obsidianSpade, ModItems.obsidianSword, ModItems.miraclerecord);
+		registerSounds(event, ModSounds.miracle);
 	}
 
 	// A method used to register blocks
