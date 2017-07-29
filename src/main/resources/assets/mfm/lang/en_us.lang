@@ -28,6 +28,13 @@ item.saspum_ballbearing.name=Saspum Ball Bearing
 item.saspum_bearingball.name=Saspum Bearing Ball
 item.gearbox.name=Gearbox
 
+//Achievements
+achievement.launch_achievement=Great Success!
+achievement.launch_achievement.desc=Create or join a world running Project Kreuthil!
+achievement.obsidian_achievement=Houston, we have a problem...
+achievement.obsidian_achievement.desc=Discover that obsidian is actually brittle??
+achievement.miracle_achievement=Steam Summer Sale!
+achievement.miracle_achievement.desc=Play the SSS theme!
 
 
 //Blocks//
