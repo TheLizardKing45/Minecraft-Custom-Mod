@@ -15,6 +15,8 @@ item.obsidian_leggings.name=Obsidian Leggings
 item.obsidian_chestplate.name=Obsidian Chestplate
 item.obsidian_helmet.name=Obsidian Helmet
 
+item.bomber_chestplate.name=Suicide Vest
+
 //Tools
 item.obsidian_pickaxe.name=Obsidian Pickaxe
 item.obsidian_axe.name=Obsidian Axe
@@ -37,6 +39,10 @@ achievement.miracle_achievement=Steam Summer Sale!
 achievement.miracle_achievement.desc=Play the SSS theme!
 
 
+//KeyBinding
+key.kreuthil.category=Project Kreuthil
+key.armorutil.desc=Armor Utility
+
 //Blocks//
 
 //Ores
@@ -50,7 +56,7 @@ tile.xasmoninium_ore.name=Xasmoninium Ore
 //OTHER//
 
 item.miracle_record.name=Music Disc
-item.record.Elvis1.desc=Elvis Presley - Can't help falling in love
+
 //lore
 lore.quality.QUALITY=Quality
 lore.quality.UNKNOWN=UNKNOWN

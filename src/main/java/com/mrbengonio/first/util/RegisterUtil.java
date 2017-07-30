@@ -24,8 +24,9 @@ public class RegisterUtil {
 		registerItems(event, ModItems.obsidianshard, ModItems.cupaliteingot, ModItems.kreuthilingot,
 				ModItems.saspumingot, ModItems.xasmoingot, ModItems.obsidianHelm, ModItems.obsidianChest,
 				ModItems.obsidianlegs, ModItems.obsidianboots, ModItems.obsidianPickaxe, ModItems.obsidianAxe,
-				ModItems.obsidianSpade, ModItems.obsidianSword, ModItems.CupaliteCog, ModItems.saspumBallBearing,
-				ModItems.saspumBearingBall, ModItems.GearBox, ModItems.Iron_BearingCasing, ModItems.miraclerecord);
+				ModItems.obsidianSpade, ModItems.obsidianSword, ModItems.BomberVest, ModItems.CupaliteCog,
+				ModItems.saspumBallBearing, ModItems.saspumBearingBall, ModItems.GearBox, ModItems.Iron_BearingCasing,
+				ModItems.miraclerecord);
 		registerSounds(event, ModSounds.miracle);
 		registerAchievements(event, ModAchievements.achievementLaunch, ModAchievements.achievementMiracle,
 				ModAchievements.achievementObsidianShard);
@@ -66,7 +67,6 @@ public class RegisterUtil {
 		for (Achievement achievement : achievements) {
 			achievement.registerStat();
 		}
-
 		AchievementPage.registerAchievementPage(new AchievementPage("Kreuthil Achievements", achievements));
 	}
 
