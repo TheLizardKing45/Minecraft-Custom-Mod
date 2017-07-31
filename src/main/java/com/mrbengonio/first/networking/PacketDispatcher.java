@@ -1,12 +1,12 @@
 package com.mrbengonio.first.networking;
 
 import com.mrbengonio.first.Reference;
+import com.mrbengonio.first.networking.packets.BomberVestExplodeMessage;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.relauncher.Side;
 
@@ -30,8 +30,8 @@ public class PacketDispatcher {
 		// of registration (for instance, if you wanted to alphabetize them... yeah...)
 		// It's even easier if you create a convenient 'registerMessage' method:
 
-		// PacketDispatcher.registerMessage(OpenGuiMessage.OpenGuiMessageHandler.class,
-		// OpenGuiMessage.class, Side.SERVER);
+		PacketDispatcher.registerMessage(BomberVestExplodeMessage.Handler.class, BomberVestExplodeMessage.class,
+				Side.SERVER);
 
 	}
 
@@ -39,12 +39,6 @@ public class PacketDispatcher {
 	 * Registers a message and message handler
 	 */
 	private static final void registerMessage(Class handlerClass, Class messageClass, Side side) {
-		PacketDispatcher.dispatcher.registerMessage(handlerClass, messageClass, packetId++, side);
-	}
-
-	private static final void registerMessage(Class<? extends IMessageHandler<REQ, REPLY>> handlerClass,
-			Class<REQ> messageClass) {
-		Side side = AbstractClientMessageHandler.class.isAssignableFrom(handlerClass) ? Side.CLIENT : Side.SERVER;
 		PacketDispatcher.dispatcher.registerMessage(handlerClass, messageClass, packetId++, side);
 	}
 

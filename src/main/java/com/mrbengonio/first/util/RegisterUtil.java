@@ -27,6 +27,7 @@ public class RegisterUtil {
 				ModItems.obsidianSpade, ModItems.obsidianSword, ModItems.BomberVest, ModItems.CupaliteCog,
 				ModItems.saspumBallBearing, ModItems.saspumBearingBall, ModItems.GearBox, ModItems.Iron_BearingCasing,
 				ModItems.miraclerecord);
+
 		registerSounds(event, ModSounds.miracle);
 		registerAchievements(event, ModAchievements.achievementLaunch, ModAchievements.achievementMiracle,
 				ModAchievements.achievementObsidianShard);
@@ -58,16 +59,20 @@ public class RegisterUtil {
 	}
 
 	private static void registerSounds(FMLPreInitializationEvent event, SoundEvent... sounds) {
-		for (SoundEvent sound : sounds) {
-			GameRegistry.register(sound, sound.getSoundName());
+		if (event.getSide() == Side.CLIENT) {
+			for (SoundEvent sound : sounds) {
+				GameRegistry.register(sound, sound.getSoundName());
+			}
 		}
 	}
 
 	private static void registerAchievements(FMLPreInitializationEvent event, Achievement... achievements) {
-		for (Achievement achievement : achievements) {
-			achievement.registerStat();
+		if (event.getSide() == Side.CLIENT) {
+			for (Achievement achievement : achievements) {
+				achievement.registerStat();
+			}
+			AchievementPage.registerAchievementPage(new AchievementPage("Kreuthil Achievements", achievements));
 		}
-		AchievementPage.registerAchievementPage(new AchievementPage("Kreuthil Achievements", achievements));
 	}
 
 }

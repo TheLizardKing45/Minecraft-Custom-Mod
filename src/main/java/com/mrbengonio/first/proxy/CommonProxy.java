@@ -2,8 +2,6 @@ package com.mrbengonio.first.proxy;
 
 import com.mrbengonio.first.handlers.CommonEventHandler;
 import com.mrbengonio.first.handlers.CraftingHandler;
-import com.mrbengonio.first.util.RegisterUtil;
-import com.mrbengonio.first.world.WorldGenOre;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,13 +11,10 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class CommonProxy {
 
 	public void preInit(FMLPreInitializationEvent e) {
-		RegisterUtil.registerAll(e);
-		GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);
 
 	}
 

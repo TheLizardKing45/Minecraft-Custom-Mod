@@ -3,7 +3,10 @@ package com.mrbengonio.first;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.mrbengonio.first.networking.PacketDispatcher;
 import com.mrbengonio.first.proxy.CommonProxy;
+import com.mrbengonio.first.util.RegisterUtil;
+import com.mrbengonio.first.world.WorldGenOre;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -11,6 +14,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class First {
@@ -26,6 +30,9 @@ public class First {
 	public void preInit(FMLPreInitializationEvent event) {
 		LOGGER.info("Starting Pre-initialization");
 		proxy.preInit(event);
+		RegisterUtil.registerAll(event);
+		GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);
+		PacketDispatcher.registerPackets();
 	}
 
 	@Mod.EventHandler
