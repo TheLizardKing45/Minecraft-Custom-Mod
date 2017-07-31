@@ -23,6 +23,9 @@ public class CraftingHandler {
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.obsidianboots), "XXX", "OXO", "OXO", 'O',
 				ModItems.obsidianshard);
 
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.BomberVest), "LTL", "LVL", "LTL", 'L', Items.LEATHER, 'T',
+				Blocks.TNT, 'V', Items.LEATHER_CHESTPLATE);
+
 		// Tools
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.obsidianAxe), "OOX", "OSX", "XSX", 'O',
 				ModItems.obsidianshard, 'S', Items.STICK);
@@ -36,10 +39,6 @@ public class CraftingHandler {
 		// Other
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.OBSIDIAN, 1), ModItems.obsidianshard,
 				ModItems.obsidianshard, ModItems.obsidianshard, ModItems.obsidianshard);
-
-		// Tech Crafting
-		// GameRegistry.addRecipe(new ItemStack(Blocks.OBSIDIAN, 1), "O", "O", "O", 'O',
-		// ModItems.obsidianshard);
 
 		TechCraftingManager.AddRecipe(new ItemStack(ModItems.CupaliteCog, 1), " C ", "C C", " C ", 'C',
 				ModItems.cupaliteingot);

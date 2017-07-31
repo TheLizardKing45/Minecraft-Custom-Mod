@@ -14,6 +14,7 @@ import com.mrbengonio.first.items.tools.ItemGenericSword;
 
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 
 public class ModItems {
 
@@ -55,6 +56,9 @@ public class ModItems {
 			MaterialHandler.obsidianArmor, 1, EntityEquipmentSlot.LEGS);
 	public static final Item obsidianboots = new ArmorGenericArmor("obsidian_boots", CreativeTabsHandler.tabKreuthil,
 			MaterialHandler.obsidianArmor, 0, EntityEquipmentSlot.FEET);
+
+	public static final Item BomberVest = new ArmorGenericArmor("bomber_chestplate", CreativeTabsHandler.tabKreuthil,
+			ItemArmor.ArmorMaterial.LEATHER, 0, EntityEquipmentSlot.CHEST);
 
 	// Tools
 	public static final Item obsidianPickaxe = new ItemGenericPickaxe("obsidian_pickaxe",
