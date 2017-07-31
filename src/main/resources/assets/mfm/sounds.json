@@ -1,0 +1,12 @@
+{
+    "miracle": {
+        "category": "records",
+        "subtitle": "miracle",
+        "sounds": [ 
+            { 
+                "name": "mfm:music/miracle", 
+                "stream": true 
+            } 
+       ]
+    }
+}
