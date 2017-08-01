@@ -37,9 +37,9 @@ public class RegisterUtil {
 	private static void registerBlocks(FMLPreInitializationEvent event, Block... blocks) {
 		for (Block block : blocks) { // New instance of a block for every block passed through
 			final ItemBlock itemblock = new ItemBlock(block);
+			GameRegistry.register(block);
+			GameRegistry.register(itemblock, block.getRegistryName());
 			if (event.getSide() == Side.CLIENT) {
-				GameRegistry.register(block);
-				GameRegistry.register(itemblock, block.getRegistryName());
 				ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0,
 						new ModelResourceLocation(block.getRegistryName(), "inventory"));
 			}
@@ -49,8 +49,8 @@ public class RegisterUtil {
 
 	private static void registerItems(FMLPreInitializationEvent event, Item... items) {
 		for (Item item : items) {
+			GameRegistry.register(item);
 			if (event.getSide() == Side.CLIENT) {
-				GameRegistry.register(item);
 				ModelLoader.setCustomModelResourceLocation(item, 0,
 						new ModelResourceLocation(item.getRegistryName(), "inventory"));
 			}
