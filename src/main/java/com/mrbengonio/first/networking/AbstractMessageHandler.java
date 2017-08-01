@@ -40,6 +40,7 @@ public abstract class AbstractMessageHandler<T extends IMessage> implements IMes
 		// even when you restrict this code to the client side and before the code is
 		// ever accessed;
 		// a solution is to use your proxy classes to get the player (see below).
+
 		if (ctx.side.isClient()) {
 			// the only reason to check side here is to use our more aptly named handling
 			// methods

@@ -1,6 +1,8 @@
 package com.mrbengonio.first.handlers;
 
 import com.mrbengonio.first.crafting.TechCraftingManager;
+import com.mrbengonio.first.crafting.TechCraftingShaped;
+import com.mrbengonio.first.crafting.TechCraftingShapeless;
 import com.mrbengonio.first.init.ModBlocks;
 import com.mrbengonio.first.init.ModItems;
 
@@ -8,10 +10,16 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.RecipeSorter;
 
 public class CraftingHandler {
 
 	public static void RegisterCrafting() {
+
+		RecipeSorter.register("mfm:techshaped", TechCraftingShaped.class, RecipeSorter.Category.SHAPED,
+				"before:mfm:techshapeless after:minecraft:shapeless");
+		RecipeSorter.register("mfm:techshapeless", TechCraftingShapeless.class, RecipeSorter.Category.SHAPELESS,
+				"after:mfm:techshaped after:minecraft:shapeless");
 
 		// Armor
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.obsidianHelm), "OOO", "OXO", "XXX", 'O',

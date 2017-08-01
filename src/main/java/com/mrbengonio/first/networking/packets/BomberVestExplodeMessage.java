@@ -31,15 +31,24 @@ public class BomberVestExplodeMessage implements IMessage {
 		@Override
 		public IMessage handleServerMessage(EntityPlayer player, BomberVestExplodeMessage message, MessageContext ctx) {
 
-			if (player.inventory.armorItemInSlot(2) != null
-					&& player.inventory.armorItemInSlot(2).getItem() == ModItems.BomberVest) {
-				player.inventory.removeStackFromSlot(38);
-				player.getEntityWorld().createExplosion(null, player.posX, player.posY, player.posZ, 6F, true);
+			final EntityPlayer threadedplayer = player;
+			player.getServer().addScheduledTask(new Runnable() {
 
-			} else {
-				First.LOGGER.warn(player.getName()
-						+ " tried to send a bombervest explosion packet without a vest! Either a hacker or a bug!");
-			}
+				public void run() {
+					if (threadedplayer.inventory.getStackInSlot(38) != null
+							&& threadedplayer.inventory.getStackInSlot(38).getItem() == ModItems.BomberVest) {
+						if (!threadedplayer.isCreative())
+							threadedplayer.inventory.removeStackFromSlot(38);
+						threadedplayer.getEntityWorld().createExplosion(null, threadedplayer.posX, threadedplayer.posY,
+								threadedplayer.posZ, 6F, true);
+
+					} else
+						First.LOGGER.warn(threadedplayer.getName()
+								+ " tried to send a bombervest explosion packet without a vest! Either a hacker or a bug!");
+
+				}
+			});
+
 			return null;
 		}
 
