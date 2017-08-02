@@ -45,7 +45,6 @@ public class BomberVestExplodeMessage implements IMessage {
 					} else
 						First.LOGGER.warn(threadedplayer.getName()
 								+ " tried to send a bombervest explosion packet without a vest! Either a hacker or a bug!");
-
 				}
 			});
 
