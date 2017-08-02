@@ -13,6 +13,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraftforge.client.event.RenderLivingEvent;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -60,6 +61,14 @@ public class CommonEventHandler {
 					&& player.inventory.armorItemInSlot(2).getItem() == ModItems.BomberVest)
 				PacketDispatcher.sendToServer(new BomberVestExplodeMessage());
 		}
+	}
+
+	@SubscribeEvent(priority = EventPriority.NORMAL)
+	public void onEvent(RenderLivingEvent.Specials.Pre event) {
+		if (event.isCancelable() && event.getEntity() instanceof EntityPlayer) {
+			event.setCanceled(true);
+		}
+
 	}
 
 }
