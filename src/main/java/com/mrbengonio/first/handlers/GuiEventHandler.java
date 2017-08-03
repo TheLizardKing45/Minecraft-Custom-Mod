@@ -29,6 +29,9 @@ public class GuiEventHandler {
 		case ARMOR:
 			event.setCanceled(true);
 			break;
+		case FOOD:
+			event.setCanceled(true);
+			break;
 		default:
 			break;
 		}
