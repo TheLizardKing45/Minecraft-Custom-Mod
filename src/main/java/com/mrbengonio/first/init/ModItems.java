@@ -57,6 +57,9 @@ public class ModItems {
 	public static final Item obsidianboots = new ArmorGenericArmor("obsidian_boots", CreativeTabsHandler.tabKreuthil,
 			MaterialHandler.obsidianArmor, 0, EntityEquipmentSlot.FEET);
 
+	public static final Item tech_helmet = new ArmorGenericArmor("tech_helmet", CreativeTabsHandler.tabKreuthil,
+			MaterialHandler.techArmor, 0, EntityEquipmentSlot.HEAD);
+
 	public static final Item BomberVest = new ArmorGenericArmor("bomber_chestplate", CreativeTabsHandler.tabKreuthil,
 			ItemArmor.ArmorMaterial.LEATHER, 0, EntityEquipmentSlot.CHEST);
 

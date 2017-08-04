@@ -19,9 +19,6 @@ public class TechStatusBarRenderer extends Gui {
 	private final static ResourceLocation overlayBar = new ResourceLocation(Reference.MOD_ID,
 			"textures/gui/tech_hud_overlay.png");
 
-	// new ResourceLocation("mfm",
-	// "/textures/gui/tech_hud_overlay.png");
-
 	private final static int BAR_WIDTH = 81;
 	private final static int BAR_HEIGHT = 9;
 	private final static int BAR_SPACING_ABOVE_EXP_BAR = 3; // pixels between the BAR and the Experience Bar below it
@@ -148,13 +145,10 @@ public class TechStatusBarRenderer extends Gui {
 		GL11.glScalef((BAR_WIDTH - 2) * Math.min(1, food / 20f), 1, 1);
 
 		final int NORMAL_TEXTURE_U = BAR_WIDTH + 5; // red texels
-		final int Hungry_TEXTURE_U = BAR_WIDTH + 6; // red texels
 		final int HUNGER_TEXTURE_U = BAR_WIDTH + 3; // brown texels
 
 		if (player.isPotionActive(MobEffects.HUNGER)) {
 			drawTexturedModalRect(0, 0, HUNGER_TEXTURE_U, 0, 1, BAR_HEIGHT - 2);
-		} else if (player.canEat(false)) {
-			drawTexturedModalRect(0, 0, Hungry_TEXTURE_U, 0, 1, BAR_HEIGHT - 2);
 		} else {
 			drawTexturedModalRect(0, 0, NORMAL_TEXTURE_U, 0, 1, BAR_HEIGHT - 2);
 		}
@@ -165,10 +159,8 @@ public class TechStatusBarRenderer extends Gui {
 		GL11.glScalef(0.5f, 0.5f, 1);
 		String s = d.format(food) + "/" + d.format(20);
 
-		/* Draw the shadow string */
-		fr.drawString(s, -fr.getStringWidth(s) + 1, 2, 0x5A2B00);
-		/* Draw the actual string */
-		fr.drawString(s, -fr.getStringWidth(s), 1, 0xFFD200);
+		fr.drawString(s, -fr.getStringWidth(s) + 1, 2, 0x4D0000);
+		fr.drawString(s, -fr.getStringWidth(s), 1, 0xFFFFFF);
 
 		GL11.glPopMatrix();
 		GL11.glPopMatrix();

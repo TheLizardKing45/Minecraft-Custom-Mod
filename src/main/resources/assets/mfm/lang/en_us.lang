@@ -15,6 +15,9 @@ item.obsidian_leggings.name=Obsidian Leggings
 item.obsidian_chestplate.name=Obsidian Chestplate
 item.obsidian_helmet.name=Obsidian Helmet
 
+item.tech_helmet.name=Tech Helmet
+
+
 item.bomber_chestplate.name=Suicide Vest
 
 //Tools

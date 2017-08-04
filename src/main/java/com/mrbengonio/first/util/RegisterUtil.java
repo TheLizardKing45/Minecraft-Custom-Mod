@@ -26,7 +26,7 @@ public class RegisterUtil {
 				ModItems.obsidianlegs, ModItems.obsidianboots, ModItems.obsidianPickaxe, ModItems.obsidianAxe,
 				ModItems.obsidianSpade, ModItems.obsidianSword, ModItems.BomberVest, ModItems.CupaliteCog,
 				ModItems.saspumBallBearing, ModItems.saspumBearingBall, ModItems.GearBox, ModItems.Iron_BearingCasing,
-				ModItems.miraclerecord);
+				ModItems.miraclerecord, ModItems.tech_helmet);
 
 		registerSounds(event, ModSounds.miracle);
 		registerAchievements(event, ModAchievements.achievementLaunch, ModAchievements.achievementMiracle,
