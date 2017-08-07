@@ -11,6 +11,12 @@ public class ModAchievements {
 			2, 1, ModItems.miraclerecord, achievementLaunch);
 
 	public static final Achievement achievementObsidianShard = new Achievement("achievement.oshard",
-			"obsidian_achievement", 2, 0, ModItems.obsidianshard, achievementLaunch);
+			"obsidian_achievement", 2, -2, ModItems.obsidianshard, achievementLaunch);
+
+	public static final Achievement achievementTechAlloy = new Achievement("achievement.talloy",
+			"techalloy_achievement", 4, -2, ModItems.TechAlloy, achievementObsidianShard);
+
+	public static final Achievement achievementTHelm = new Achievement("achievement.thelm", "techhelm_achievement", 6,
+			-2, ModItems.tech_helmet, achievementTechAlloy);
 
 }

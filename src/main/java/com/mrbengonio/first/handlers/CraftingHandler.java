@@ -54,6 +54,11 @@ public class CraftingHandler {
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.Iron_BearingCasing, 2), "III", "I I", "III", 'I',
 				Items.IRON_INGOT);
 
+		TechCraftingManager.addShapelessRecipe(new ItemStack(ModItems.cupaliteDust), ModItems.cupaliteingot);
+		TechCraftingManager.addShapelessRecipe(new ItemStack(ModItems.saspumDust), ModItems.saspumingot);
+		TechCraftingManager.addShapelessRecipe(new ItemStack(ModItems.techalloyDust, 4), ModItems.cupaliteDust,
+				ModItems.saspumDust, ModItems.xasmoDust, ModItems.obsidianshard);
+		TechCraftingManager.addShapelessRecipe(new ItemStack(ModItems.xasmoDust), ModItems.xasmoingot);
 		TechCraftingManager.addShapelessRecipe(new ItemStack(ModItems.saspumBearingBall), ModItems.saspumingot);
 
 		TechCraftingManager.AddRecipe(new ItemStack(ModItems.saspumBallBearing), "BBB", "BCB", "BBB", 'B',
@@ -62,6 +67,11 @@ public class CraftingHandler {
 		TechCraftingManager.AddRecipe(new ItemStack(ModItems.GearBox), "IGI", "BGB", "IGI", 'I', Items.IRON_INGOT, 'G',
 				ModItems.CupaliteCog, 'B', ModItems.saspumBallBearing);
 
+		TechCraftingManager.AddRecipe(new ItemStack(ModItems.tech_helmet), "TTT", "GCG", "TTT", 'T', ModItems.TechAlloy,
+				'G', Blocks.GLASS, 'C', ModItems.optic_board);
+
+		TechCraftingManager.AddRecipe(new ItemStack(ModItems.optic_board), "RSR", "IKI", "RSR", 'R', Items.REDSTONE,
+				'I', Items.IRON_INGOT, 'S', ModItems.saspumingot, 'K', ModItems.kreuthilingot);
 	}
 
 	public static void RegisterSmelting() {
@@ -70,6 +80,11 @@ public class CraftingHandler {
 		GameRegistry.addSmelting(ModBlocks.kreuthilOre, new ItemStack(ModItems.kreuthilingot), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.saspumOre, new ItemStack(ModItems.saspumingot), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.xasmoOre, new ItemStack(ModItems.xasmoingot), 1.0F);
+
+		GameRegistry.addSmelting(ModItems.techalloyDust, new ItemStack(ModItems.TechAlloy), 1.0F);
+		GameRegistry.addSmelting(ModItems.cupaliteDust, new ItemStack(ModItems.cupaliteingot), 1.0F);
+		GameRegistry.addSmelting(ModItems.saspumDust, new ItemStack(ModItems.saspumingot), 1.0F);
+		GameRegistry.addSmelting(ModItems.xasmoDust, new ItemStack(ModItems.xasmoingot), 1.0F);
 	}
 
 }

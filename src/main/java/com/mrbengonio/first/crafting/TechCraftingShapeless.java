@@ -33,7 +33,10 @@ public class TechCraftingShapeless extends ShapelessRecipes {
 				}
 			}
 		}
-		average = (quality / number);
+		if (number != 0)
+			average = (quality / number);
+		else
+			average = 0;
 
 		First.LOGGER.info("Average: " + average);
 		if (!result.hasTagCompound()) {

@@ -17,6 +17,8 @@ import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent.ItemSmeltedEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -46,6 +48,22 @@ public class CommonEventHandler {
 		}
 	}
 
+	@SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
+	public void onEvent(ItemSmeltedEvent event) {
+		if (event.smelting.getItem() == ModItems.TechAlloy) {
+			EntityPlayer player = event.player;
+			player.addStat(ModAchievements.achievementTHelm);
+		}
+	}
+
+	@SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
+	public void onEvent(ItemCraftedEvent event) {
+		if (event.crafting.getItem() == ModItems.tech_helmet) {
+			EntityPlayer player = event.player;
+			player.addStat(ModAchievements.achievementTHelm);
+		}
+	}
+
 	@SideOnly(Side.CLIENT)
 	@SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
 	public void onEvent(KeyInputEvent event) {
@@ -61,4 +79,5 @@ public class CommonEventHandler {
 				PacketDispatcher.sendToServer(new BomberVestExplodeMessage());
 		}
 	}
+
 }
