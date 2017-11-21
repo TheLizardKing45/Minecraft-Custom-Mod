@@ -34,7 +34,7 @@
     },
     "requirements": [
         [
-            "inv_changed-kreuthil:obsidian_shard"
+            "inv_changed-mfm:obsidian_shard"
         ]
     ]
 }

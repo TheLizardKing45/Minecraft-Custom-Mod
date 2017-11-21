@@ -5,7 +5,10 @@ import java.text.NumberFormat;
 import java.util.List;
 import java.util.Random;
 
+import javax.annotation.Nullable;
+
 import net.minecraft.client.resources.I18n;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -59,17 +62,18 @@ public class ItemTechIngot extends ItemBase {
 		}
 	}
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> lores, boolean advanced) {
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		if (stack.hasTagCompound() && stack.getTagCompound().hasKey("Quality")
 				&& stack.getTagCompound().getInteger("MaxQuality") > 0) {
 			NumberFormat nf = new DecimalFormat("##.###");
 
-			lores.add(I18n.format("lore.quality.QUALITY") + ": " + nf.format(stack.getTagCompound().getFloat("Quality"))
-					+ "/" + Integer.toString(stack.getTagCompound().getInteger("MaxQuality")));
+			tooltip.add(
+					I18n.format("lore.quality.QUALITY") + ": " + nf.format(stack.getTagCompound().getFloat("Quality"))
+							+ "/" + Integer.toString(stack.getTagCompound().getInteger("MaxQuality")));
 		} else {
-			lores.add(I18n.format("lore.quality.QUALITY") + ": " + I18n.format("lore.quality.UNKNOWN"));
+			tooltip.add(I18n.format("lore.quality.QUALITY") + ": " + I18n.format("lore.quality.UNKNOWN"));
 		}
 	}
 
