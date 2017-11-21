@@ -25,10 +25,30 @@ public class ItemGenericRecord extends ItemRecord {
 		return title;
 	}
 
-	@Override
 	@SideOnly(Side.CLIENT)
 	public ResourceLocation getRecordResource(String name) {
 		return new ResourceLocation(Reference.MOD_ID, name);
+	}
+
+	@Override
+	public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand,
+			EnumFacing facing, float hitX, float hitY, float hitZ) {
+		IBlockState iblockstate = worldIn.getBlockState(pos);
+
+		if (iblockstate.getBlock() == Blocks.JUKEBOX
+				&& !((Boolean) iblockstate.getValue(BlockJukebox.HAS_RECORD)).booleanValue()) {
+			if (!worldIn.isRemote) {
+				ItemStack itemstack = player.getHeldItem(hand);
+				((BlockJukebox) Blocks.JUKEBOX).insertRecord(worldIn, pos, iblockstate, itemstack);
+				worldIn.playEvent((EntityPlayer) null, 1010, pos, Item.getIdFromItem(this));
+				itemstack.shrink(1);
+				player.addStat(StatList.RECORD_PLAYED);
+			}
+
+			return EnumActionResult.SUCCESS;
+		} else {
+			return EnumActionResult.PASS;
+		}
 	}
 
 }

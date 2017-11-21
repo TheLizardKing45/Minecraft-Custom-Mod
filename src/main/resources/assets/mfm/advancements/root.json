@@ -1,0 +1,40 @@
+{
+    "display": {
+        "description": {
+            "text": "Discover that obsidian is actually brittle??",
+            "bold": true,
+            "color": "white"
+        },
+        "title": {
+            "text": "Houston, we have a problem...",
+            "bold": true,
+            "color": "white"
+        },
+        "icon": {
+            "item": "tnt",
+            "data": 0
+        },
+        "background": "minecraft:textures/blocks/bedrock.png"
+    },
+    "criteria": {
+        "inv_changed-kreuthil:obsidian_shard": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mfm:obsidian_shard",
+                        "data": 0
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "experience": 100
+    },
+    "requirements": [
+        [
+            "inv_changed-kreuthil:obsidian_shard"
+        ]
+    ]
+}

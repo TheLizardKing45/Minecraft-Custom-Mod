@@ -25,7 +25,6 @@ public class CommonProxy {
 	public void init(FMLInitializationEvent e) {
 		GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);
 		MinecraftForge.EVENT_BUS.register(new CommonEventHandler());
-		CraftingHandler.RegisterCrafting();
 		CraftingHandler.RegisterSmelting();
 		PacketDispatcher.registerPackets();
 
@@ -44,7 +43,7 @@ public class CommonProxy {
 	 * Returns a side-appropriate EntityPlayer for use during message handling
 	 */
 	public EntityPlayer getPlayerEntity(MessageContext ctx) {
-		return ctx.getServerHandler().playerEntity;
+		return ctx.getServerHandler().player;
 	}
 
 }

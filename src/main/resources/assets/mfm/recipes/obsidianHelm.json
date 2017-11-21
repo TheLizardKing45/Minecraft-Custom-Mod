@@ -1,0 +1,16 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "OOO",
+        "O O",
+        "   "
+    ],
+    "key": {
+        "O": {
+            "item": "mfm:obsidian_shard"
+        }
+    },
+    "result": {
+        "item": "mfm:obsidian_helmet"
+    }
+}
