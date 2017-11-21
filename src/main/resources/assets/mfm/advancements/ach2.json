@@ -1,0 +1,39 @@
+{
+    "display": {
+        "description": {
+            "text": "Discover the SSS Theme!",
+            "bold": true,
+            "color": "white"
+        },
+        "title": {
+            "text": "Steam Summer Sale!",
+            "bold": true,
+            "color": "white"
+        },
+        "icon": {
+            "item": "record_blocks",
+            "data": 0
+        }
+    },
+    "criteria": {
+        "inv_changed-mfm:miracle_record": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mfm:miracle_record",
+                        "data": 0
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+    },
+    "requirements": [
+        [
+            "inv_changed-kreuthil:miracle_record"
+        ]
+    ],
+    "parent": "ProjectKreuthil:root"
+}

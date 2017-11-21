@@ -60,7 +60,6 @@ public class ItemTechIngot extends ItemBase {
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> lores, boolean advanced) {
 		if (stack.hasTagCompound() && stack.getTagCompound().hasKey("Quality")

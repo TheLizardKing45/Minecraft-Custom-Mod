@@ -1,7 +1,6 @@
 package com.mrbengonio.first.items.records;
 
 import com.mrbengonio.first.Reference;
-import com.mrbengonio.first.init.ModAchievements;
 
 import net.minecraft.block.BlockJukebox;
 import net.minecraft.block.state.IBlockState;
@@ -38,7 +37,6 @@ public class ItemGenericRecord extends ItemRecord {
 		return title;
 	}
 
-	@Override
 	@SideOnly(Side.CLIENT)
 	public ResourceLocation getRecordResource(String name) {
 		return new ResourceLocation(Reference.MOD_ID, name);
@@ -57,7 +55,6 @@ public class ItemGenericRecord extends ItemRecord {
 				worldIn.playEvent((EntityPlayer) null, 1010, pos, Item.getIdFromItem(this));
 				itemstack.shrink(1);
 				player.addStat(StatList.RECORD_PLAYED);
-				player.addStat(ModAchievements.achievementMiracle, 1);
 			}
 
 			return EnumActionResult.SUCCESS;

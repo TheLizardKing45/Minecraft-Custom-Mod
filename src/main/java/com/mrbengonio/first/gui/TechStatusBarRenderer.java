@@ -39,7 +39,7 @@ public class TechStatusBarRenderer extends Gui {
 		EntityPlayer player = mc.player;
 
 		/* This object draws text using the Minecraft font */
-		FontRenderer fr = mc.fontRendererObj;
+		FontRenderer fr = mc.fontRenderer;
 
 		/* This object inserts commas into number strings */
 		DecimalFormat d = new DecimalFormat("#,###");
@@ -114,7 +114,7 @@ public class TechStatusBarRenderer extends Gui {
 		EntityPlayer player = mc.player;
 
 		/* This object draws text using the Minecraft font */
-		FontRenderer fr = mc.fontRendererObj;
+		FontRenderer fr = mc.fontRenderer;
 
 		/* This object inserts commas into number strings */
 		DecimalFormat d = new DecimalFormat("#,###");

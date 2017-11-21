@@ -1,0 +1,39 @@
+{
+    "display": {
+        "description": {
+            "text": "Discover player nameplates!",
+            "bold": true,
+            "color": "white"
+        },
+        "title": {
+            "text": "Privacy Invasion!",
+            "bold": true,
+            "color": "white"
+        },
+        "icon": {
+            "item": "leather_helmet",
+            "data": 0
+        }
+    },
+    "criteria": {
+        "inv_changed-kreuthil:tech_helmet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mfm:tech_helmet",
+                        "data": 0
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+    },
+    "requirements": [
+        [
+            "inv_changed-kreuthil:tech_helmet"
+        ]
+    ],
+    "parent": "ProjectKreuthil:ach2"
+}
