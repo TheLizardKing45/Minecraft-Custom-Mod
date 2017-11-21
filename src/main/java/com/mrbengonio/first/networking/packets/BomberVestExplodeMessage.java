@@ -41,11 +41,9 @@ public class BomberVestExplodeMessage implements IMessage {
 							threadedplayer.inventory.removeStackFromSlot(38);
 						threadedplayer.getEntityWorld().createExplosion(null, threadedplayer.posX, threadedplayer.posY,
 								threadedplayer.posZ, 6F, true);
-
 					} else
 						First.LOGGER.warn(threadedplayer.getName()
 								+ " tried to send a bombervest explosion packet without a vest! Either a hacker or a bug!");
-
 				}
 			});
 

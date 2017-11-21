@@ -5,15 +5,25 @@ item.cupalite_ingot.name=Cupalite Ingot
 item.saspum_ingot.name=Saspum Ingot
 item.kreuthil_ingot.name=Kreuthil Ingot
 item.xasmoninium_ingot.name=Xasmoninium Ingot
+item.tech_alloy.name=Tech Alloy
 
 //Shards
 item.obsidian_shard.name=Obsidian Shard
+
+//Dust
+item.xasmoninium_dust.name=Xasmoninium Dust
+item.cupalite_dust.name=Cupalite Dust
+item.saspum_dust.name=Saspum Dust
+item.tech_dust.name=Tech Dust
 
 //Armor
 item.obsidian_boots.name=Obsidian Boots
 item.obsidian_leggings.name=Obsidian Leggings
 item.obsidian_chestplate.name=Obsidian Chestplate
 item.obsidian_helmet.name=Obsidian Helmet
+
+item.tech_helmet.name=Tech Helmet
+
 
 item.bomber_chestplate.name=Suicide Vest
 
@@ -29,6 +39,7 @@ item.iron_bearingcasing.name=Saspum Ball Bearing Casing
 item.saspum_ballbearing.name=Saspum Ball Bearing
 item.saspum_bearingball.name=Saspum Bearing Ball
 item.gearbox.name=Gearbox
+item.optic_board.name=Optic Circuit Board
 
 //Achievements
 achievement.launch_achievement=Great Success!
@@ -37,6 +48,10 @@ achievement.obsidian_achievement=Houston, we have a problem...
 achievement.obsidian_achievement.desc=Discover that obsidian is actually brittle??
 achievement.miracle_achievement=Steam Summer Sale!
 achievement.miracle_achievement.desc=Play the SSS theme!
+achievement.techalloy_achievement=Stronger Than Titanium!
+achievement.techalloy_achievement.desc=Discover the tech alloy!
+achievement.thelm_achievement=Privacy Invasion!
+achievement.thelm_achievement.desc=Figure out how to view NamePlates!
 
 
 //KeyBinding

@@ -23,7 +23,8 @@ public class RegisterUtil {
 				ModItems.obsidianlegs, ModItems.obsidianboots, ModItems.obsidianPickaxe, ModItems.obsidianAxe,
 				ModItems.obsidianSpade, ModItems.obsidianSword, ModItems.BomberVest, ModItems.CupaliteCog,
 				ModItems.saspumBallBearing, ModItems.saspumBearingBall, ModItems.GearBox, ModItems.Iron_BearingCasing,
-				ModItems.miraclerecord);
+				ModItems.miraclerecord, ModItems.tech_helmet, ModItems.TechAlloy, ModItems.xasmoDust,
+				ModItems.cupaliteDust, ModItems.saspumDust, ModItems.techalloyDust, ModItems.optic_board);
 
 		registerSounds(event, ModSounds.miracle);
 	}

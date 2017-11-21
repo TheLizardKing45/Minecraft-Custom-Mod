@@ -29,6 +29,16 @@ public class ModItems {
 	public static final Item xasmoingot = new ItemTechIngot("xasmoninium_ingot", CreativeTabsHandler.tabKreuthil, 16,
 			5);
 
+	public static final Item TechAlloy = new ItemTechComponent("tech_alloy", CreativeTabsHandler.tabKreuthil, 16);
+
+	// Ingot Powders
+	public static final Item xasmoDust = new ItemTechComponent("xasmoninium_dust", CreativeTabsHandler.tabKreuthil,
+			64);
+	public static final Item saspumDust = new ItemTechComponent("saspum_dust", CreativeTabsHandler.tabKreuthil, 64);
+	public static final Item cupaliteDust = new ItemTechComponent("cupalite_dust", CreativeTabsHandler.tabKreuthil,
+			64);
+	public static final Item techalloyDust = new ItemTechComponent("tech_dust", CreativeTabsHandler.tabKreuthil, 16);
+
 	// Tech Components
 	public static final Item CupaliteCog = new ItemTechComponent("Cupalite_cog", CreativeTabsHandler.tabKreuthil, 64);
 
@@ -44,6 +54,8 @@ public class ModItems {
 	public static final Item Iron_BearingCasing = new ItemGenericItem("iron_bearingcasing",
 			CreativeTabsHandler.tabKreuthil, 32);
 
+	public static final Item optic_board = new ItemTechComponent("optic_board", CreativeTabsHandler.tabKreuthil, 64);
+
 	// Shards
 	public static final Item obsidianshard = new ItemGenericItem("obsidian_shard", CreativeTabsHandler.tabKreuthil, 64);
 
@@ -56,6 +68,9 @@ public class ModItems {
 			MaterialHandler.obsidianArmor, 1, EntityEquipmentSlot.LEGS);
 	public static final Item obsidianboots = new ArmorGenericArmor("obsidian_boots", CreativeTabsHandler.tabKreuthil,
 			MaterialHandler.obsidianArmor, 0, EntityEquipmentSlot.FEET);
+
+	public static final Item tech_helmet = new ArmorGenericArmor("tech_helmet", CreativeTabsHandler.tabKreuthil,
+			MaterialHandler.techArmor, 0, EntityEquipmentSlot.HEAD);
 
 	public static final Item BomberVest = new ArmorGenericArmor("bomber_chestplate", CreativeTabsHandler.tabKreuthil,
 			ItemArmor.ArmorMaterial.LEATHER, 0, EntityEquipmentSlot.CHEST);

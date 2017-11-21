@@ -31,12 +31,4 @@ public class CommonEventHandler {
 		}
 	}
 
-	@SubscribeEvent(priority = EventPriority.NORMAL)
-	public void onEvent(RenderLivingEvent.Specials.Pre event) {
-		if (event.isCancelable() && event.getEntity() instanceof EntityPlayer) {
-			event.setCanceled(true);
-		}
-
-	}
-
 }

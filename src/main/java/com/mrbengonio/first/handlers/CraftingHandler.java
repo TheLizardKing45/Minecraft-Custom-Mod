@@ -72,6 +72,11 @@ public class CraftingHandler {
 		GameRegistry.addSmelting(ModBlocks.kreuthilOre, new ItemStack(ModItems.kreuthilingot), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.saspumOre, new ItemStack(ModItems.saspumingot), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.xasmoOre, new ItemStack(ModItems.xasmoingot), 1.0F);
+
+		GameRegistry.addSmelting(ModItems.techalloyDust, new ItemStack(ModItems.TechAlloy), 1.0F);
+		GameRegistry.addSmelting(ModItems.cupaliteDust, new ItemStack(ModItems.cupaliteingot), 1.0F);
+		GameRegistry.addSmelting(ModItems.saspumDust, new ItemStack(ModItems.saspumingot), 1.0F);
+		GameRegistry.addSmelting(ModItems.xasmoDust, new ItemStack(ModItems.xasmoingot), 1.0F);
 	}
 
 }
