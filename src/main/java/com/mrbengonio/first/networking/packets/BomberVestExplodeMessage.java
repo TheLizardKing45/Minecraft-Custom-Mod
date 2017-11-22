@@ -36,7 +36,7 @@ public class BomberVestExplodeMessage implements IMessage {
 
 				public void run() {
 					if (threadedplayer.inventory.getStackInSlot(38) != null
-							&& threadedplayer.inventory.getStackInSlot(38).getItem() == ModItems.BomberVest) {
+							&& threadedplayer.inventory.getStackInSlot(38).getItem() == ModItems.ITEMS[21]) {
 						if (!threadedplayer.isCreative())
 							threadedplayer.inventory.removeStackFromSlot(38);
 						threadedplayer.getEntityWorld().createExplosion(null, threadedplayer.posX, threadedplayer.posY,

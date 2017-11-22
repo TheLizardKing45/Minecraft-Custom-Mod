@@ -25,7 +25,7 @@ public class GuiEventHandler {
 			return; // just in case
 
 		if (entityPlayerSP.inventory.armorItemInSlot(3) != null
-				&& entityPlayerSP.inventory.armorItemInSlot(3).getItem() == ModItems.tech_helmet) {
+				&& entityPlayerSP.inventory.armorItemInSlot(3).getItem() == ModItems.ITEMS[20]) {
 			switch (event.getType()) {
 			case HEALTH:
 				techStatusBarRenderer.renderStatusBar(event.getResolution().getScaledWidth(),
@@ -49,7 +49,7 @@ public class GuiEventHandler {
 		EntityPlayerSP entityPlayerSP = Minecraft.getMinecraft().player;
 		if (event.isCancelable() && event.getEntity() instanceof EntityPlayer) {
 			if (entityPlayerSP.inventory.armorItemInSlot(3) != null
-					&& entityPlayerSP.inventory.armorItemInSlot(3).getItem() == ModItems.tech_helmet) {
+					&& entityPlayerSP.inventory.armorItemInSlot(3).getItem() == ModItems.ITEMS[20]) {
 				event.setCanceled(false);
 			} else {
 				event.setCanceled(true);

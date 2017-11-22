@@ -26,8 +26,10 @@ public class CommonEventHandler {
 			EntityPlayer player = Minecraft.getMinecraft().player;
 
 			if (player.inventory.armorItemInSlot(2) != null
-					&& player.inventory.armorItemInSlot(2).getItem() == ModItems.BomberVest)
+					&& player.inventory.armorItemInSlot(2).getItem() == ModItems.ITEMS[21]) {
+
 				PacketDispatcher.sendToServer(new BomberVestExplodeMessage());
+			}
 		}
 	}
 

@@ -18,74 +18,65 @@ import net.minecraft.item.ItemArmor;
 
 public class ModItems {
 
-	// Register Items
+	public static final Item[] ITEMS = {
 
-	// Ingot
-	public static final Item cupaliteingot = new ItemTechIngot("cupalite_ingot", CreativeTabsHandler.tabKreuthil, 16,
-			5);
-	public static final Item saspumingot = new ItemTechIngot("saspum_ingot", CreativeTabsHandler.tabKreuthil, 32, 5);
-	public static final Item kreuthilingot = new ItemTechIngot("kreuthil_ingot", CreativeTabsHandler.tabKreuthil, 16,
-			5);
-	public static final Item xasmoingot = new ItemTechIngot("xasmoninium_ingot", CreativeTabsHandler.tabKreuthil, 16,
-			5);
+			// Register Items
 
-	public static final Item TechAlloy = new ItemTechComponent("tech_alloy", CreativeTabsHandler.tabKreuthil, 16);
+			// 1-4
+			new ItemTechIngot("cupalite_ingot", CreativeTabsHandler.tabKreuthil, 16, 5),
+			new ItemTechIngot("saspum_ingot", CreativeTabsHandler.tabKreuthil, 32, 5),
+			new ItemTechIngot("kreuthil_ingot", CreativeTabsHandler.tabKreuthil, 16, 5),
+			new ItemTechIngot("xasmoninium_ingot", CreativeTabsHandler.tabKreuthil, 16, 5),
 
-	// Ingot Powders
-	public static final Item xasmoDust = new ItemTechComponent("xasmoninium_dust", CreativeTabsHandler.tabKreuthil,
-			64);
-	public static final Item saspumDust = new ItemTechComponent("saspum_dust", CreativeTabsHandler.tabKreuthil, 64);
-	public static final Item cupaliteDust = new ItemTechComponent("cupalite_dust", CreativeTabsHandler.tabKreuthil,
-			64);
-	public static final Item techalloyDust = new ItemTechComponent("tech_dust", CreativeTabsHandler.tabKreuthil, 16);
+			// 5
+			new ItemTechComponent("tech_alloy", CreativeTabsHandler.tabKreuthil, 16),
 
-	// Tech Components
-	public static final Item CupaliteCog = new ItemTechComponent("Cupalite_cog", CreativeTabsHandler.tabKreuthil, 64);
+			// Ingot Powders
+			new ItemTechComponent("xasmoninium_dust", CreativeTabsHandler.tabKreuthil, 64),
+			new ItemTechComponent("saspum_dust", CreativeTabsHandler.tabKreuthil, 64),
+			new ItemTechComponent("cupalite_dust", CreativeTabsHandler.tabKreuthil, 64),
+			new ItemTechComponent("tech_dust", CreativeTabsHandler.tabKreuthil, 16),
 
-	public static final Item saspumBearingBall = new ItemTechComponent("saspum_bearingball",
-			CreativeTabsHandler.tabKreuthil, 64);
+			// Tech Components
+			new ItemTechComponent("Cupalite_cog", CreativeTabsHandler.tabKreuthil, 64),
 
-	public static final Item saspumBallBearing = new ItemTechComponent("saspum_ballbearing",
-			CreativeTabsHandler.tabKreuthil, 32);
+			new ItemTechComponent("saspum_bearingball", CreativeTabsHandler.tabKreuthil, 64),
 
-	public static final Item GearBox = new ItemTechComponent("gearbox", CreativeTabsHandler.tabKreuthil, 8);
+			new ItemTechComponent("saspum_ballbearing", CreativeTabsHandler.tabKreuthil, 32),
 
-	// Components
-	public static final Item Iron_BearingCasing = new ItemGenericItem("iron_bearingcasing",
-			CreativeTabsHandler.tabKreuthil, 32);
+			new ItemTechComponent("gearbox", CreativeTabsHandler.tabKreuthil, 8),
 
-	public static final Item optic_board = new ItemTechComponent("optic_board", CreativeTabsHandler.tabKreuthil, 64);
+			// Components
+			new ItemGenericItem("iron_bearingcasing", CreativeTabsHandler.tabKreuthil, 32),
 
-	// Shards
-	public static final Item obsidianshard = new ItemGenericItem("obsidian_shard", CreativeTabsHandler.tabKreuthil, 64);
+			new ItemTechComponent("optic_board", CreativeTabsHandler.tabKreuthil, 64),
 
-	// Armor
-	public static final Item obsidianHelm = new ArmorGenericArmor("obsidian_helmet", CreativeTabsHandler.tabKreuthil,
-			MaterialHandler.obsidianArmor, 0, EntityEquipmentSlot.HEAD);
-	public static final Item obsidianChest = new ArmorGenericArmor("obsidian_chestplate",
-			CreativeTabsHandler.tabKreuthil, MaterialHandler.obsidianArmor, 0, EntityEquipmentSlot.CHEST);
-	public static final Item obsidianlegs = new ArmorGenericArmor("obsidian_leggings", CreativeTabsHandler.tabKreuthil,
-			MaterialHandler.obsidianArmor, 1, EntityEquipmentSlot.LEGS);
-	public static final Item obsidianboots = new ArmorGenericArmor("obsidian_boots", CreativeTabsHandler.tabKreuthil,
-			MaterialHandler.obsidianArmor, 0, EntityEquipmentSlot.FEET);
+			// Shards
+			new ItemGenericItem("obsidian_shard", CreativeTabsHandler.tabKreuthil, 64),
 
-	public static final Item tech_helmet = new ArmorGenericArmor("tech_helmet", CreativeTabsHandler.tabKreuthil,
-			MaterialHandler.techArmor, 0, EntityEquipmentSlot.HEAD);
+			// Armor
+			new ArmorGenericArmor("obsidian_helmet", CreativeTabsHandler.tabKreuthil, MaterialHandler.obsidianArmor, 0,
+					EntityEquipmentSlot.HEAD),
+			new ArmorGenericArmor("obsidian_chestplate", CreativeTabsHandler.tabKreuthil, MaterialHandler.obsidianArmor,
+					0, EntityEquipmentSlot.CHEST),
+			new ArmorGenericArmor("obsidian_leggings", CreativeTabsHandler.tabKreuthil, MaterialHandler.obsidianArmor,
+					1, EntityEquipmentSlot.LEGS),
+			new ArmorGenericArmor("obsidian_boots", CreativeTabsHandler.tabKreuthil, MaterialHandler.obsidianArmor, 0,
+					EntityEquipmentSlot.FEET),
 
-	public static final Item BomberVest = new ArmorGenericArmor("bomber_chestplate", CreativeTabsHandler.tabKreuthil,
-			ItemArmor.ArmorMaterial.LEATHER, 0, EntityEquipmentSlot.CHEST);
+			new ArmorGenericArmor("tech_helmet", CreativeTabsHandler.tabKreuthil, MaterialHandler.techArmor, 0,
+					EntityEquipmentSlot.HEAD), // 20
 
-	// Tools
-	public static final Item obsidianPickaxe = new ItemGenericPickaxe("obsidian_pickaxe",
-			CreativeTabsHandler.tabKreuthil, MaterialHandler.obsidianTool);
-	public static final Item obsidianAxe = new ItemGenericAxe("obsidian_axe", CreativeTabsHandler.tabKreuthil,
-			MaterialHandler.obsidianTool);
-	public static final Item obsidianSpade = new ItemGenericSpade("obsidian_spade", CreativeTabsHandler.tabKreuthil,
-			MaterialHandler.obsidianTool);
-	public static final Item obsidianSword = new ItemGenericSword("obsidian_sword", CreativeTabsHandler.tabKreuthil,
-			MaterialHandler.obsidianTool);
+			new ArmorGenericArmor("bomber_chestplate", CreativeTabsHandler.tabKreuthil, ItemArmor.ArmorMaterial.LEATHER,
+					0, EntityEquipmentSlot.CHEST), // 21
 
-	// Other
-	public static final Item miraclerecord = new ItemGenericRecord("miracle_record", ModSounds.miracle,
-			"Are You Ready For A Miracle?", "Patti LaBelle");
+			// Tools
+			new ItemGenericPickaxe("obsidian_pickaxe", CreativeTabsHandler.tabKreuthil, MaterialHandler.obsidianTool),
+			new ItemGenericAxe("obsidian_axe", CreativeTabsHandler.tabKreuthil, MaterialHandler.obsidianTool),
+			new ItemGenericSpade("obsidian_spade", CreativeTabsHandler.tabKreuthil, MaterialHandler.obsidianTool),
+			new ItemGenericSword("obsidian_sword", CreativeTabsHandler.tabKreuthil, MaterialHandler.obsidianTool),
+
+			// Other
+			new ItemGenericRecord("miracle_record", ModSounds.miracle, "Are You Ready For A Miracle?",
+					"Patti LaBelle") };
 }

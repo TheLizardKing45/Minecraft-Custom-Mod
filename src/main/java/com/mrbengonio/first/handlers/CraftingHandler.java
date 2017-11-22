@@ -1,11 +1,5 @@
 package com.mrbengonio.first.handlers;
 
-import com.mrbengonio.first.init.ModBlocks;
-import com.mrbengonio.first.init.ModItems;
-
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-
 public class CraftingHandler {
 
 	// Armor
@@ -65,18 +59,24 @@ public class CraftingHandler {
 	 * GameRegistry.addShapedRecipe(new ItemStack(ModItems.optic_board), "RSR",
 	 * "IKI", "RSR", 'R', Items.REDSTONE, 'I', Items.IRON_INGOT, 'S',
 	 * ModItems.saspumingot, 'K', ModItems.kreuthilingot); }
+	 * 
+	 * public static void RegisterSmelting() { // Ores
+	 * GameRegistry.addSmelting(ModBlocks.cupaliteOre, new
+	 * ItemStack(ModItems.cupaliteingot), 1.0F);
+	 * GameRegistry.addSmelting(ModBlocks.kreuthilOre, new
+	 * ItemStack(ModItems.kreuthilingot), 1.0F);
+	 * GameRegistry.addSmelting(ModBlocks.saspumOre, new
+	 * ItemStack(ModItems.saspumingot), 1.0F);
+	 * GameRegistry.addSmelting(ModBlocks.xasmoOre, new
+	 * ItemStack(ModItems.xasmoingot), 1.0F);
+	 * 
+	 * GameRegistry.addSmelting(ModItems.techalloyDust, new
+	 * ItemStack(ModItems.TechAlloy), 1.0F);
+	 * GameRegistry.addSmelting(ModItems.cupaliteDust, new
+	 * ItemStack(ModItems.cupaliteingot), 1.0F);
+	 * GameRegistry.addSmelting(ModItems.saspumDust, new
+	 * ItemStack(ModItems.saspumingot), 1.0F);
+	 * GameRegistry.addSmelting(ModItems.xasmoDust, new
+	 * ItemStack(ModItems.xasmoingot), 1.0F); }
 	 */
-	public static void RegisterSmelting() {
-		// Ores
-		GameRegistry.addSmelting(ModBlocks.cupaliteOre, new ItemStack(ModItems.cupaliteingot), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.kreuthilOre, new ItemStack(ModItems.kreuthilingot), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.saspumOre, new ItemStack(ModItems.saspumingot), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.xasmoOre, new ItemStack(ModItems.xasmoingot), 1.0F);
-
-		GameRegistry.addSmelting(ModItems.techalloyDust, new ItemStack(ModItems.TechAlloy), 1.0F);
-		GameRegistry.addSmelting(ModItems.cupaliteDust, new ItemStack(ModItems.cupaliteingot), 1.0F);
-		GameRegistry.addSmelting(ModItems.saspumDust, new ItemStack(ModItems.saspumingot), 1.0F);
-		GameRegistry.addSmelting(ModItems.xasmoDust, new ItemStack(ModItems.xasmoingot), 1.0F);
-	}
-
 }

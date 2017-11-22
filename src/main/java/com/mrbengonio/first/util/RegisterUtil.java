@@ -1,5 +1,6 @@
 package com.mrbengonio.first.util;
 
+import com.mrbengonio.first.First;
 import com.mrbengonio.first.Reference;
 import com.mrbengonio.first.init.ModBlocks;
 import com.mrbengonio.first.init.ModItems;
@@ -10,6 +11,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.SoundEvent;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -20,39 +22,39 @@ public class RegisterUtil {
 
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
-		event.getRegistry().registerAll(ModBlocks.cupaliteOre, ModBlocks.kreuthilOre, ModBlocks.saspumOre,
-				ModBlocks.xasmoOre);
-	}
+		event.getRegistry().registerAll(ModBlocks.BLOCKS);
 
-	private static void registerBlockModels(RegistryEvent.Register<Block> event, Block... blocks) {
-		for (Block block : blocks) {
-			final ItemBlock itemblock = new ItemBlock(block);
-			event.getRegistry().register(block);
-			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0,
-					new ModelResourceLocation(block.getRegistryName(), "inventory"));
-		}
+		First.LOGGER.info("Registered blocks");
 	}
 
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event) {
-		registerItemModels(event, ModItems.obsidianshard, ModItems.cupaliteingot, ModItems.kreuthilingot,
-				ModItems.saspumingot, ModItems.xasmoingot, ModItems.obsidianHelm, ModItems.obsidianChest,
-				ModItems.obsidianlegs, ModItems.obsidianboots, ModItems.obsidianPickaxe, ModItems.obsidianAxe,
-				ModItems.obsidianSpade, ModItems.obsidianSword, ModItems.BomberVest, ModItems.CupaliteCog,
-				ModItems.saspumBallBearing, ModItems.saspumBearingBall, ModItems.GearBox, ModItems.Iron_BearingCasing,
-				ModItems.miraclerecord, ModItems.tech_helmet, ModItems.TechAlloy, ModItems.xasmoDust,
-				ModItems.cupaliteDust, ModItems.saspumDust, ModItems.techalloyDust, ModItems.optic_board);
+		event.getRegistry().registerAll(ModItems.ITEMS);
+
+		for (Block block : ModBlocks.BLOCKS) {
+			event.getRegistry().register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
+		}
+
+		First.LOGGER.info("Registered items");
 	}
 
-	private static void registerItemModels(RegistryEvent.Register<Item> event, Item... items) {
-		for (Item item : items) {
-			event.getRegistry().register(item);
+	@SubscribeEvent
+	public static void registerModels(ModelRegistryEvent event) {
+		for (Block block : ModBlocks.BLOCKS) {
+			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0,
+					new ModelResourceLocation(block.getRegistryName(), "inventory"));
+		}
+		for (Item item : ModItems.ITEMS) {
 			ModelLoader.setCustomModelResourceLocation(item, 0,
 					new ModelResourceLocation(item.getRegistryName(), "inventory"));
 		}
+		First.LOGGER.info("Registered models");
 	}
 
+	// Pretty sure this isn't being called
 	public static void registerSounds(RegistryEvent.Register<SoundEvent> event) {
 		event.getRegistry().registerAll(ModSounds.miracle);
+
+		First.LOGGER.info("Registered sounds");
 	}
 }

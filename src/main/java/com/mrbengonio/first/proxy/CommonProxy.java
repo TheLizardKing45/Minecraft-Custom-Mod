@@ -1,7 +1,6 @@
 package com.mrbengonio.first.proxy;
 
 import com.mrbengonio.first.handlers.CommonEventHandler;
-import com.mrbengonio.first.handlers.CraftingHandler;
 import com.mrbengonio.first.networking.PacketDispatcher;
 import com.mrbengonio.first.world.WorldGenOre;
 
@@ -23,7 +22,6 @@ public class CommonProxy {
 	public void init(FMLInitializationEvent e) {
 		GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);
 		MinecraftForge.EVENT_BUS.register(new CommonEventHandler());
-		CraftingHandler.RegisterSmelting();
 		PacketDispatcher.registerPackets();
 
 	}
