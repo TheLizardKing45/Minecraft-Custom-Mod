@@ -22,16 +22,21 @@ public class RegisterUtil {
 
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
-		event.getRegistry().registerAll(ModBlocks.BLOCKS);
+
+		for (Block block : ModBlocks.BLOCKS.values()) {
+			event.getRegistry().register(block);
+		}
 
 		First.LOGGER.info("Registered blocks");
 	}
 
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event) {
-		event.getRegistry().registerAll(ModItems.ITEMS);
 
-		for (Block block : ModBlocks.BLOCKS) {
+		for (Item item : ModItems.ITEMS.values()) {
+			event.getRegistry().register(item);
+		}
+		for (Block block : ModBlocks.BLOCKS.values()) {
 			event.getRegistry().register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
 		}
 
@@ -40,11 +45,11 @@ public class RegisterUtil {
 
 	@SubscribeEvent
 	public static void registerModels(ModelRegistryEvent event) {
-		for (Block block : ModBlocks.BLOCKS) {
+		for (Block block : ModBlocks.BLOCKS.values()) {
 			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0,
 					new ModelResourceLocation(block.getRegistryName(), "inventory"));
 		}
-		for (Item item : ModItems.ITEMS) {
+		for (Item item : ModItems.ITEMS.values()) {
 			ModelLoader.setCustomModelResourceLocation(item, 0,
 					new ModelResourceLocation(item.getRegistryName(), "inventory"));
 		}

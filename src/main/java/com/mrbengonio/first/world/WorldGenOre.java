@@ -31,16 +31,16 @@ public class WorldGenOre implements IWorldGenerator {
 		// Block.getdefaultstate(), world, random, chunkX, chunkZ, maxVeinSize,
 		// chanceToSpawn, miny, maxy, spawninblock
 
-		addOreSpawn(ModBlocks.BLOCKS[2].getDefaultState(), world, random, chunkX, chunkZ, 16, 12, 1 + random.nextInt(3),
-				13, 1, 10, BlockMatcher.forBlock(Blocks.STONE));
+		addOreSpawn(ModBlocks.BLOCKS.get("ore_kreuthil").getDefaultState(), world, random, chunkX, chunkZ, 16, 12,
+				1 + random.nextInt(3), 13, 1, 10, BlockMatcher.forBlock(Blocks.STONE));
 
-		addOreSpawn(ModBlocks.BLOCKS[0].getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 2 + random.nextInt(8),
-				12, 16, 32, BlockMatcher.forBlock(Blocks.STONE));
+		addOreSpawn(ModBlocks.BLOCKS.get("ore_cupalite").getDefaultState(), world, random, chunkX, chunkZ, 16, 16,
+				2 + random.nextInt(8), 12, 16, 32, BlockMatcher.forBlock(Blocks.STONE));
 
-		addOreSpawn(ModBlocks.BLOCKS[1].getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 4, 20, 100, 200,
-				BlockMatcher.forBlock(Blocks.STONE));
+		addOreSpawn(ModBlocks.BLOCKS.get("ore_saspum").getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 4, 20,
+				100, 200, BlockMatcher.forBlock(Blocks.STONE));
 
-		addOreSpawn(ModBlocks.BLOCKS[3].getDefaultState(), world, random, chunkX, chunkZ, 16, 16,
+		addOreSpawn(ModBlocks.BLOCKS.get("ore_xasmoninium").getDefaultState(), world, random, chunkX, chunkZ, 16, 16,
 				1 + (random.nextInt(5)), 20, 32, 50, BlockMatcher.forBlock(Blocks.STONE));
 
 	}
