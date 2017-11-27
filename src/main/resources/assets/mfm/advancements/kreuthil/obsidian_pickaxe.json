@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "mfm:obsidian_pickaxe"
+        },
+        "title": {
+            "translate": "advancements.kreuthil.obsidian_pickaxe.title"
+        },
+        "description": {
+            "translate": "advancements.kreuthil.obsidian_pickaxe.description"
+        },
+        "hidden": true
+    },
+    "parent": "mfm:kreuthil/craft_obsidian",
+    "criteria": {
+        "obsidian_pickaxe": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mfm:obsidian_pickaxe"
+                    }
+                ]
+            }
+        }
+    }
+}

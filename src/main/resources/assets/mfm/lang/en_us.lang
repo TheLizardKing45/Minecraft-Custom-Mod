@@ -41,18 +41,30 @@ item.saspum_bearingball.name=Saspum Bearing Ball
 item.gearbox.name=Gearbox
 item.optic_board.name=Optic Circuit Board
 
-//Achievements
-achievement.launch_achievement=Great Success!
-achievement.launch_achievement.desc=Create or join a world running Project Kreuthil!
-achievement.obsidian_achievement=Houston, we have a problem...
-achievement.obsidian_achievement.desc=Discover that obsidian is actually brittle??
-achievement.miracle_achievement=Steam Summer Sale!
-achievement.miracle_achievement.desc=Play the SSS theme!
-achievement.techalloy_achievement=Stronger Than Titanium!
-achievement.techalloy_achievement.desc=Discover the tech alloy!
-achievement.thelm_achievement=Privacy Invasion!
-achievement.thelm_achievement.desc=Figure out how to view NamePlates!
+//Advancements
+advancements.kreuthil.root.title=Kreuthil
+advancements.kreuthil.root.description=A whole new world
 
+advancements.kreuthil.craft_obsidian.title=Shattered!
+advancements.kreuthil.craft_obsidian.description=Hammer obsidian back together...
+
+advancements.kreuthil.miracle_record.title=Steam Summer Sale!
+advancements.kreuthil.miracle_record.description=Obtain the SSS theme!
+
+advancements.kreuthil.obsidian_armor.title=Suiting Up Again!
+advancements.kreuthil.obsidian_armor.description=Obtain obsidian armor
+
+advancements.kreuthil.obsidian_pickaxe.title=Getting a bigger upgrade!
+advancements.kreuthil.obsidian_pickaxe.description=Construct an even better pickaxe
+
+advancements.kreuthil.obsidian_tools.title=Unstoppable!
+advancements.kreuthil.obsidian_tools.description=Obtain a full set of obsidian tools
+
+advancements.kreuthil.obtain_kreuthil.title=Obtaining Kreuthil!
+advancements.kreuthil.obtain_kreuthil.description=Get your hands on Kreuthil!
+
+advancements.kreuthil.obtain_techalloy.title=Stronger than titanium!
+advancements.kreuthil.obtain_techalloy.description=Discover the tech alloy!
 
 //KeyBinding
 key.kreuthil.category=Project Kreuthil

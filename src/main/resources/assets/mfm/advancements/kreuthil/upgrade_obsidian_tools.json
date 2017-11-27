@@ -1,0 +1,64 @@
+{
+    "display": {
+        "icon": {
+            "item": "mfm:obsidian_spade"
+        },
+        "title": {
+            "translate": "advancements.kreuthil.obsidian_tools.title"
+        },
+        "description": {
+            "translate": "advancements.kreuthil.obsidian_tools.description"
+        }
+    },
+    "parent": "mfm:kreuthil/craft_obsidian",
+    "criteria": {
+        "obsidian_axe": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mfm:obsidian_axe"
+                    }
+                ]
+            }
+        },
+        "obsidian_pickaxe": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mfm:obsidian_pickaxe"
+                    }
+                ]
+            }
+        },
+        "obsidian_spade": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mfm:obsidian_spade"
+                    }
+                ]
+            }
+        },
+        "obsidian_sword": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mfm:obsidian_sword"
+                    }
+                ]
+            }
+        }
+        
+    },
+     "requirements": [
+        ["obsidian_axe"],
+        ["obsidian_pickaxe"],
+        ["obsidian_spade"],
+        ["obsidian_sword"]
+        
+    ]
+}

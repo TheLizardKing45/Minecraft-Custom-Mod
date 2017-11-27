@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:obsidian"
+        },
+        "title": {
+            "translate": "advancements.kreuthil.craft_obsidian.title"
+        },
+        "description": {
+            "translate": "advancements.kreuthil.craft_obsidian.description"
+        },
+        "hidden": true
+    },    
+    "parent": "mfm:kreuthil/root",
+    "criteria": {
+        "get_obsidian": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:obsidian"
+                    }
+                ]
+            }
+        }
+    }
+}

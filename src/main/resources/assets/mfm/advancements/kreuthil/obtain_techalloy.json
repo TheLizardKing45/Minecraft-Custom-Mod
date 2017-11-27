@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "mfm:tech_alloy"
+        },
+        "title": {
+            "translate": "advancements.kreuthil.obtain_techalloy.title"
+        },
+        "description": {
+            "translate": "advancements.kreuthil.obtain_techalloy.description"
+        }        
+    },
+    "parent": "mfm:kreuthil/obtain_kreuthil",
+    "criteria": {
+        "get_techalloy": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mfm:tech_alloy"
+                    }
+                ]
+            }
+        }
+    }
+}
