@@ -58,7 +58,7 @@ public class RegisterUtil {
 
 	// Pretty sure this isn't being called
 	public static void registerSounds(RegistryEvent.Register<SoundEvent> event) {
-		event.getRegistry().registerAll(ModSounds.miracle);
+		event.getRegistry().registerAll(ModSounds.miracle, ModSounds.lobby);
 
 		First.LOGGER.info("Registered sounds");
 	}

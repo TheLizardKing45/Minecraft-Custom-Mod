@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "mfm:lobby_record"
+        },
+        "title": {
+            "translate": "advancements.kreuthil.lobby_record.title"
+        },
+        "description": {
+            "translate": "advancements.kreuthil.lobby_record.description"
+        },
+        "hidden": true
+    },
+    "parent": "mfm:kreuthil/miracle_record",
+    "criteria": {
+        "get_lobby_record": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mfm:lobby_record"
+                    }
+                ]
+            }
+        }
+    }
+}

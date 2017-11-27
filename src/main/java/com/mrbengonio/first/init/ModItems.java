@@ -75,6 +75,7 @@ public class ModItems {
 			// Jukebox discs
 			put("record_miracle", new ItemGenericRecord("miracle_record", ModSounds.miracle,
 					"Are You Ready For A Miracle?", "Patti LaBelle"));
+			put("record_lobby", new ItemGenericRecord("lobby_record", ModSounds.lobby, "Lobby Time", "Kevin MacLeod"));
 		}
 	};
 }

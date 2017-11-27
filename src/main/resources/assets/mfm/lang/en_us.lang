@@ -51,6 +51,9 @@ advancements.kreuthil.craft_obsidian.description=Hammer obsidian back together..
 advancements.kreuthil.miracle_record.title=Steam Summer Sale!
 advancements.kreuthil.miracle_record.description=Obtain the SSS theme!
 
+advancements.kreuthil.lobby_record.title=Do you like jazz?
+advancements.kreuthil.lobby_record.description=Obtain some smooth jazz
+
 advancements.kreuthil.obsidian_armor.title=Suiting Up Again!
 advancements.kreuthil.obsidian_armor.description=Obtain obsidian armor
 
@@ -83,6 +86,7 @@ tile.xasmoninium_ore.name=Xasmoninium Ore
 //OTHER//
 
 item.miracle_record.name=Music Disc
+item.lobby_record.name=Music Disc
 
 //lore
 lore.quality.QUALITY=Quality

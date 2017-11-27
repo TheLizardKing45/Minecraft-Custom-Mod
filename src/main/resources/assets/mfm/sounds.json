@@ -8,5 +8,15 @@
                 "stream": true 
             } 
        ]
+    },
+     "lobby": {
+        "category": "records",
+        "subtitle": "lobby",
+        "sounds": [ 
+            { 
+                "name": "mfm:music/lobby", 
+                "stream": true 
+            } 
+       ]
     }
 }
