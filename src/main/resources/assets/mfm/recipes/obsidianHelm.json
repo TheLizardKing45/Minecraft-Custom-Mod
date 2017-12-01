@@ -1,13 +1,12 @@
 {
-    "type": "crafting_shaped",
+    "type": "minecraft:crafting_shaped",
     "pattern": [
         "OOO",
-        "O O",
-        "   "
+        "O O"        
     ],
     "key": {
         "O": {
-            "item": "mfm:obsidian_shard"
+            "item": "mfm:obsidian_gem"
         }
     },
     "result": {

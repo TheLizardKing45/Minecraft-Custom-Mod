@@ -11,6 +11,7 @@ import com.mrbengonio.first.items.ItemTechIngot;
 import com.mrbengonio.first.items.armor.ArmorGenericArmor;
 import com.mrbengonio.first.items.records.ItemGenericRecord;
 import com.mrbengonio.first.items.tools.ItemGenericAxe;
+import com.mrbengonio.first.items.tools.ItemGenericHoe;
 import com.mrbengonio.first.items.tools.ItemGenericPickaxe;
 import com.mrbengonio.first.items.tools.ItemGenericSpade;
 import com.mrbengonio.first.items.tools.ItemGenericSword;
@@ -30,6 +31,9 @@ public class ModItems {
 			put("ingot_xasmoninium", new ItemTechIngot("xasmoninium_ingot", CreativeTabsHandler.tabKreuthil, 16, 5));
 
 			put("alloy_tech", new ItemTechComponent("tech_alloy", CreativeTabsHandler.tabKreuthil, 16));
+
+			// Gems
+			put("gem_obsidian", new ItemGenericItem("obsidian_gem", CreativeTabsHandler.tabKreuthil, 64));
 
 			// Powders
 			put("powder_xasmoninium", new ItemTechComponent("xasmoninium_dust", CreativeTabsHandler.tabKreuthil, 64));
@@ -71,11 +75,15 @@ public class ModItems {
 					MaterialHandler.obsidianTool));
 			put("sword_obsidian", new ItemGenericSword("obsidian_sword", CreativeTabsHandler.tabKreuthil,
 					MaterialHandler.obsidianTool));
+			put("hoe_obsidian",
+					new ItemGenericHoe("obsidian_hoe", CreativeTabsHandler.tabKreuthil, MaterialHandler.obsidianTool));
 
 			// Jukebox discs
 			put("record_miracle", new ItemGenericRecord("miracle_record", ModSounds.miracle,
 					"Are You Ready For A Miracle?", "Patti LaBelle"));
 			put("record_lobby", new ItemGenericRecord("lobby_record", ModSounds.lobby, "Lobby Time", "Kevin MacLeod"));
+			put("record_holiday", new ItemGenericRecord("holiday_record", ModSounds.holiday, "Allah's Holiday",
+					"Ted Lewis & His Band"));
 		}
 	};
 }

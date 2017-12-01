@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [        
+        "O",
+        "S",
+        "S"
+    ],
+    "key": {
+        "O": {
+            "item": "mfm:obsidian_gem"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "mfm:obsidian_spade"
+    }
+}

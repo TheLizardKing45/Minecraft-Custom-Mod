@@ -10,6 +10,9 @@ item.tech_alloy.name=Tech Alloy
 //Shards
 item.obsidian_shard.name=Obsidian Shard
 
+//Gems
+item.obsidian_gem.name=Obsidian Gem
+
 //Dust
 item.xasmoninium_dust.name=Xasmoninium Dust
 item.cupalite_dust.name=Cupalite Dust
@@ -32,6 +35,7 @@ item.obsidian_pickaxe.name=Obsidian Pickaxe
 item.obsidian_axe.name=Obsidian Axe
 item.obsidian_spade.name=Obsidian Spade
 item.obsidian_sword.name=Obsidian Sword
+item.obsidian_hoe.name=Obsidian Hoe
 
 //Crafting Components
 item.Cupalite_cog.name=Cupalite Cog
@@ -45,8 +49,8 @@ item.optic_board.name=Optic Circuit Board
 advancements.kreuthil.root.title=Kreuthil
 advancements.kreuthil.root.description=A whole new world
 
-advancements.kreuthil.craft_obsidian.title=Shattered!
-advancements.kreuthil.craft_obsidian.description=Hammer obsidian back together...
+advancements.kreuthil.craft_obsidianshard.title=Shattered!
+advancements.kreuthil.craft_obsidianshard.description=Smash Obsidian Into A Million Pieces...
 
 advancements.kreuthil.miracle_record.title=Steam Summer Sale!
 advancements.kreuthil.miracle_record.description=Obtain the SSS theme!
@@ -87,6 +91,7 @@ tile.xasmoninium_ore.name=Xasmoninium Ore
 
 item.miracle_record.name=Music Disc
 item.lobby_record.name=Music Disc
+item.holiday_record.name=Music Disc
 
 //lore
 lore.quality.QUALITY=Quality

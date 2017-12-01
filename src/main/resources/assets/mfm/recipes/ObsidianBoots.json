@@ -2,8 +2,7 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         "O O",
-        "OOO",
-        "OOO"
+        "O O"
     ],
     "key": {
         "O": {
@@ -11,6 +10,6 @@
         }
     },
     "result": {
-        "item": "mfm:obsidian_chestplate"
+        "item": "mfm:obsidian_boots"
     }
 }

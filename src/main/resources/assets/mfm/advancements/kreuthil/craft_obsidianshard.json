@@ -4,10 +4,10 @@
             "item": "minecraft:obsidian"
         },
         "title": {
-            "translate": "advancements.kreuthil.craft_obsidian.title"
+            "translate": "advancements.kreuthil.craft_obsidianshard.title"
         },
         "description": {
-            "translate": "advancements.kreuthil.craft_obsidian.description"
+            "translate": "advancements.kreuthil.craft_obsidianshard.description"
         },
         "hidden": true
     },    
@@ -18,7 +18,7 @@
             "conditions": {
                 "items": [
                     {
-                        "item": "minecraft:obsidian"
+                        "item": "mfm:obsidian_shard"
                     }
                 ]
             }

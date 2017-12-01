@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "mfm:cupalite_ingot"
+        }
+    ],
+    "result": {
+        "item": "mfm:cupalite_dust",
+        "count": 1
+    }
+}

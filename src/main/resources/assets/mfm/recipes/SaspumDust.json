@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "mfm:saspum_ingot"
+        }
+    ],
+    "result": {
+        "item": "mfm:saspum_dust",
+        "count": 1
+    }
+}
