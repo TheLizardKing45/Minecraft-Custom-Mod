@@ -37,6 +37,10 @@ item.obsidian_spade.name=Obsidian Spade
 item.obsidian_sword.name=Obsidian Sword
 item.obsidian_hoe.name=Obsidian Hoe
 
+item.ornate_sword.name=Ornate Sword
+item.ornate_sword.lore=This sword is funny
+
+
 //Crafting Components
 item.Cupalite_cog.name=Cupalite Cog
 item.iron_bearingcasing.name=Saspum Ball Bearing Casing

@@ -15,9 +15,11 @@ import com.mrbengonio.first.items.tools.ItemGenericHoe;
 import com.mrbengonio.first.items.tools.ItemGenericPickaxe;
 import com.mrbengonio.first.items.tools.ItemGenericSpade;
 import com.mrbengonio.first.items.tools.ItemGenericSword;
+import com.mrbengonio.first.items.tools.ItemOrnateSword;
 
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor;
 
 public class ModItems {
@@ -77,6 +79,9 @@ public class ModItems {
 					MaterialHandler.obsidianTool));
 			put("hoe_obsidian",
 					new ItemGenericHoe("obsidian_hoe", CreativeTabsHandler.tabKreuthil, MaterialHandler.obsidianTool));
+
+			put("sword_ornate",
+					new ItemOrnateSword("ornate_sword", CreativeTabsHandler.tabKreuthil, ToolMaterial.IRON));
 
 			// Jukebox discs
 			put("record_miracle", new ItemGenericRecord("miracle_record", ModSounds.miracle,

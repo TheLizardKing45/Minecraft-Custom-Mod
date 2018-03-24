@@ -42,7 +42,6 @@ public class WorldGenOre implements IWorldGenerator {
 
 		addOreSpawn(ModBlocks.BLOCKS.get("ore_xasmoninium").getDefaultState(), world, random, chunkX, chunkZ, 16, 16,
 				1 + (random.nextInt(5)), 20, 32, 50, BlockMatcher.forBlock(Blocks.STONE));
-
 	}
 
 	private void addOreSpawn(IBlockState block, World world, Random random, int blockXPos, int BlockZPos, int maxX,
