@@ -8,7 +8,9 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -27,8 +29,7 @@ public class ItemOrnateSword extends ItemGenericSword {
 	@Override
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
 		stack.damageItem(1, attacker);
-		attacker.startRiding(target);
-		target.setCustomNameTag("test");
+		target.addPotionEffect((new PotionEffect(MobEffects.POISON, 2 * 20, 5, false, false)));
 		return true;
 	}
 
@@ -43,5 +44,4 @@ public class ItemOrnateSword extends ItemGenericSword {
 	public boolean hasEffect(ItemStack stack) {
 		return true;
 	}
-
 }

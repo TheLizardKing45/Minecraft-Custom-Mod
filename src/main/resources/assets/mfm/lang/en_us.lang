@@ -49,6 +49,16 @@ item.saspum_bearingball.name=Saspum Bearing Ball
 item.gearbox.name=Gearbox
 item.optic_board.name=Optic Circuit Board
 
+//Orbs
+item.poison_orb.name=Poison Orb
+item.glowing_orb.name=Glowing Orb
+item.levitation_orb.name=Levitation Orb
+item.blindness_orb.name=Blindness Orb
+
+//FOOD
+item.deity_sandvich.name=Sandvich
+
+
 //Advancements
 advancements.kreuthil.root.title=Kreuthil
 advancements.kreuthil.root.description=A whole new world

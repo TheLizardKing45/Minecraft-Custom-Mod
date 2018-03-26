@@ -5,7 +5,9 @@ import java.util.Map;
 
 import com.mrbengonio.first.handlers.CreativeTabsHandler;
 import com.mrbengonio.first.handlers.MaterialHandler;
+import com.mrbengonio.first.items.ItemEffectItem;
 import com.mrbengonio.first.items.ItemGenericItem;
+import com.mrbengonio.first.items.ItemSandvich;
 import com.mrbengonio.first.items.ItemTechComponent;
 import com.mrbengonio.first.items.ItemTechIngot;
 import com.mrbengonio.first.items.armor.ArmorGenericArmor;
@@ -17,6 +19,7 @@ import com.mrbengonio.first.items.tools.ItemGenericSpade;
 import com.mrbengonio.first.items.tools.ItemGenericSword;
 import com.mrbengonio.first.items.tools.ItemOrnateSword;
 
+import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
@@ -82,6 +85,19 @@ public class ModItems {
 
 			put("sword_ornate",
 					new ItemOrnateSword("ornate_sword", CreativeTabsHandler.tabKreuthil, ToolMaterial.IRON));
+
+			// Effect orbs
+
+			put("orb_poison",
+					new ItemEffectItem("poison_orb", CreativeTabsHandler.tabKreuthil, 2, 64, MobEffects.POISON));
+			put("orb_levitation", new ItemEffectItem("levitation_orb", CreativeTabsHandler.tabKreuthil, 2, 64,
+					MobEffects.LEVITATION));
+			put("orb_glowing",
+					new ItemEffectItem("glowing_orb", CreativeTabsHandler.tabKreuthil, 2, 64, MobEffects.GLOWING));
+			put("orb_blindness",
+					new ItemEffectItem("blindness_orb", CreativeTabsHandler.tabKreuthil, 2, 64, MobEffects.BLINDNESS));
+
+			put("deity_sandvich", new ItemSandvich("deity_sandvich", 10, 20));
 
 			// Jukebox discs
 			put("record_miracle", new ItemGenericRecord("miracle_record", ModSounds.miracle,
