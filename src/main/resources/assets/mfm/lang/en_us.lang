@@ -54,6 +54,7 @@ item.poison_orb.name=Poison Orb
 item.glowing_orb.name=Glowing Orb
 item.levitation_orb.name=Levitation Orb
 item.blindness_orb.name=Blindness Orb
+item.regeneration_orb.name=Regeneration Orb
 
 //FOOD
 item.deity_sandvich.name=Sandvich

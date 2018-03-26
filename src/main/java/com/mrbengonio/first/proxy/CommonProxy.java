@@ -1,5 +1,8 @@
 package com.mrbengonio.first.proxy;
 
+import com.mrbengonio.first.First;
+import com.mrbengonio.first.commands.CommandLightning;
+import com.mrbengonio.first.commands.CommandLukasdragon;
 import com.mrbengonio.first.handlers.CommonEventHandler;
 import com.mrbengonio.first.networking.PacketDispatcher;
 import com.mrbengonio.first.world.WorldGenOre;
@@ -23,13 +26,15 @@ public class CommonProxy {
 		GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);
 		MinecraftForge.EVENT_BUS.register(new CommonEventHandler());
 		PacketDispatcher.registerPackets();
-
 	}
 
 	public void postInit(FMLPostInitializationEvent e) {
 	}
 
 	public void serverStarting(FMLServerStartingEvent event) {
+		First.LOGGER.debug("registering commands");
+		event.registerServerCommand(new CommandLukasdragon());
+		event.registerServerCommand(new CommandLightning());
 	}
 
 	public void serverStopping(FMLServerStoppingEvent event) {

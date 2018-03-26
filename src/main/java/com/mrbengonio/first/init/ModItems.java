@@ -96,7 +96,10 @@ public class ModItems {
 					new ItemEffectItem("glowing_orb", CreativeTabsHandler.tabKreuthil, 2, 64, MobEffects.GLOWING));
 			put("orb_blindness",
 					new ItemEffectItem("blindness_orb", CreativeTabsHandler.tabKreuthil, 2, 64, MobEffects.BLINDNESS));
+			put("orb_regeneration", new ItemEffectItem("regeneration_orb", CreativeTabsHandler.tabKreuthil, 4, 64,
+					MobEffects.REGENERATION, MobEffects.RESISTANCE));
 
+			// FOOD
 			put("deity_sandvich", new ItemSandvich("deity_sandvich", 10, 20));
 
 			// Jukebox discs
