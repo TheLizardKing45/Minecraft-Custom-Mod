@@ -5,9 +5,19 @@ item.cupalite_ingot.name=Cupalite Ingot
 item.saspum_ingot.name=Saspum Ingot
 item.kreuthil_ingot.name=Kreuthil Ingot
 item.xasmoninium_ingot.name=Xasmoninium Ingot
+item.tech_alloy.name=Tech Alloy
 
 //Shards
 item.obsidian_shard.name=Obsidian Shard
+
+//Gems
+item.obsidian_gem.name=Obsidian Gem
+
+//Dust
+item.xasmoninium_dust.name=Xasmoninium Dust
+item.cupalite_dust.name=Cupalite Dust
+item.saspum_dust.name=Saspum Dust
+item.tech_dust.name=Tech Dust
 
 //Armor
 item.obsidian_boots.name=Obsidian Boots
@@ -15,11 +25,21 @@ item.obsidian_leggings.name=Obsidian Leggings
 item.obsidian_chestplate.name=Obsidian Chestplate
 item.obsidian_helmet.name=Obsidian Helmet
 
+item.tech_helmet.name=Tech Helmet
+
+
+item.bomber_chestplate.name=Suicide Vest
+
 //Tools
 item.obsidian_pickaxe.name=Obsidian Pickaxe
 item.obsidian_axe.name=Obsidian Axe
 item.obsidian_spade.name=Obsidian Spade
 item.obsidian_sword.name=Obsidian Sword
+item.obsidian_hoe.name=Obsidian Hoe
+
+item.ornate_sword.name=Ornate Sword
+item.ornate_sword.lore=This sword is funny
+
 
 //Crafting Components
 item.Cupalite_cog.name=Cupalite Cog
@@ -27,8 +47,50 @@ item.iron_bearingcasing.name=Saspum Ball Bearing Casing
 item.saspum_ballbearing.name=Saspum Ball Bearing
 item.saspum_bearingball.name=Saspum Bearing Ball
 item.gearbox.name=Gearbox
+item.optic_board.name=Optic Circuit Board
+
+//Orbs
+item.poison_orb.name=Poison Orb
+item.glowing_orb.name=Glowing Orb
+item.levitation_orb.name=Levitation Orb
+item.blindness_orb.name=Blindness Orb
+item.regeneration_orb.name=Regeneration Orb
+
+//FOOD
+item.deity_sandvich.name=Sandvich
 
 
+//Advancements
+advancements.kreuthil.root.title=Kreuthil
+advancements.kreuthil.root.description=A whole new world
+
+advancements.kreuthil.craft_obsidianshard.title=Shattered!
+advancements.kreuthil.craft_obsidianshard.description=Smash Obsidian Into A Million Pieces...
+
+advancements.kreuthil.miracle_record.title=Steam Summer Sale!
+advancements.kreuthil.miracle_record.description=Obtain the SSS theme!
+
+advancements.kreuthil.lobby_record.title=Do you like jazz?
+advancements.kreuthil.lobby_record.description=Obtain some smooth jazz
+
+advancements.kreuthil.obsidian_armor.title=Suiting Up Again!
+advancements.kreuthil.obsidian_armor.description=Obtain obsidian armor
+
+advancements.kreuthil.obsidian_pickaxe.title=Getting a bigger upgrade!
+advancements.kreuthil.obsidian_pickaxe.description=Construct an even better pickaxe
+
+advancements.kreuthil.obsidian_tools.title=Unstoppable!
+advancements.kreuthil.obsidian_tools.description=Obtain a full set of obsidian tools
+
+advancements.kreuthil.obtain_kreuthil.title=Obtaining Kreuthil!
+advancements.kreuthil.obtain_kreuthil.description=Get your hands on Kreuthil!
+
+advancements.kreuthil.obtain_techalloy.title=Stronger than titanium!
+advancements.kreuthil.obtain_techalloy.description=Discover the tech alloy!
+
+//KeyBinding
+key.kreuthil.category=Project Kreuthil
+key.armorutil.desc=Armor Utility
 
 //Blocks//
 
@@ -43,7 +105,9 @@ tile.xasmoninium_ore.name=Xasmoninium Ore
 //OTHER//
 
 item.miracle_record.name=Music Disc
-item.record.Elvis1.desc=Elvis Presley - Can't help falling in love
+item.lobby_record.name=Music Disc
+item.holiday_record.name=Music Disc
+
 //lore
 lore.quality.QUALITY=Quality
 lore.quality.UNKNOWN=UNKNOWN

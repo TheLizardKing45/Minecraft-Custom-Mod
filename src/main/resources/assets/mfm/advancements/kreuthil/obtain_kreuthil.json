@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "mfm:kreuthil_ingot"
+        },
+        "title": {
+            "translate": "advancements.kreuthil.obtain_kreuthil.title"
+        },
+        "description": {
+            "translate": "advancements.kreuthil.obtain_kreuthil.description"
+        }
+    },
+    "parent": "mfm:kreuthil/obsidian_pickaxe",
+    "criteria": {
+        "get_kreuthil": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mfm:kreuthil_ingot"
+                    }
+                ]
+            }
+        }
+    }
+}

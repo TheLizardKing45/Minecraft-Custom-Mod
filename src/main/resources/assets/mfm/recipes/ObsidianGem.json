@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " O ",
+        "ODO",
+        " O "
+    ],
+    "key": {
+    "D": {
+            "item": "minecraft:diamond"
+        },
+    "O": {
+            "item": "mfm:obsidian_shard"
+        }
+    },
+    "result": {
+        "item": "mfm:obsidian_gem"
+    }
+}

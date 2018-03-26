@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "BBB",
+        "BCB",
+        "BBB"
+    ],
+    "key": {
+        "B": {
+            "item": "mfm:saspum_bearingball"
+        },
+        "C": {
+            "item": "mfm:iron_ballbearing"
+        }
+    },
+    "result": {
+        "item": "mfm:iron_bearingcasing"
+    }
+}

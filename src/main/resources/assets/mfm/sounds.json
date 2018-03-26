@@ -8,5 +8,25 @@
                 "stream": true 
             } 
        ]
+    },
+     "lobby": {
+        "category": "records",
+        "subtitle": "lobby",
+        "sounds": [ 
+            { 
+                "name": "mfm:music/lobby", 
+                "stream": true 
+            } 
+       ]
+    },
+     "holiday": {
+        "category": "records",
+        "subtitle": "holiday",
+        "sounds": [ 
+            { 
+                "name": "mfm:music/holiday", 
+                "stream": true 
+            } 
+       ]
     }
 }

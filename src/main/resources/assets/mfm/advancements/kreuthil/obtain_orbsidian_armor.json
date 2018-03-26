@@ -1,0 +1,65 @@
+{
+    "display": {
+        "icon": {
+            "item": "mfm:obsidian_chestplate"
+        },
+        "title": {
+            "translate": "advancements.kreuthil.obsidian_armor.title"
+        },
+        "description": {
+            "translate": "advancements.kreuthil.obsidian_armor.description"
+        }
+    },
+    "parent": "mfm:kreuthil/craft_obsidian",
+    "criteria": {
+        "obsidian_boots": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mfm:obsidian_boots"
+                    }
+                ]
+            }
+        },
+        "obsidian_chestplate": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mfm:obsidian_chestplate"
+                    }
+                ]
+            }
+        },
+        "obsidian_helmet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mfm:obsidian_helmet"
+                    }
+                ]
+            }
+        },
+        "obsidian_leggings": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mfm:obsidian_leggings"
+                    }
+                ]
+            }
+        }
+        
+    },
+     "requirements": [
+        [
+            "obsidian_boots",
+            "obsidian_chestplate",
+            "obsidian_helmet",
+            "obsidian_leggings"
+        ]
+    ]
+}

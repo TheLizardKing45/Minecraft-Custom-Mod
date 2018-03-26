@@ -10,13 +10,14 @@ import net.minecraft.block.state.pattern.BlockMatcher;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
 public class WorldGenOre implements IWorldGenerator {
 
+	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator,
 			IChunkProvider chunkProvider) {
 		switch (world.provider.getDimension()) {
@@ -30,18 +31,17 @@ public class WorldGenOre implements IWorldGenerator {
 		// Block.getdefaultstate(), world, random, chunkX, chunkZ, maxVeinSize,
 		// chanceToSpawn, miny, maxy, spawninblock
 
-		addOreSpawn(ModBlocks.kreuthilOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 12,
+		addOreSpawn(ModBlocks.BLOCKS.get("ore_kreuthil").getDefaultState(), world, random, chunkX, chunkZ, 16, 12,
 				1 + random.nextInt(3), 13, 1, 10, BlockMatcher.forBlock(Blocks.STONE));
 
-		addOreSpawn(ModBlocks.cupaliteOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16,
+		addOreSpawn(ModBlocks.BLOCKS.get("ore_cupalite").getDefaultState(), world, random, chunkX, chunkZ, 16, 16,
 				2 + random.nextInt(8), 12, 16, 32, BlockMatcher.forBlock(Blocks.STONE));
 
-		addOreSpawn(ModBlocks.saspumOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 4, 20, 100, 200,
-				BlockMatcher.forBlock(Blocks.STONE));
+		addOreSpawn(ModBlocks.BLOCKS.get("ore_saspum").getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 4, 20,
+				100, 200, BlockMatcher.forBlock(Blocks.STONE));
 
-		addOreSpawn(ModBlocks.xasmoOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16,
+		addOreSpawn(ModBlocks.BLOCKS.get("ore_xasmoninium").getDefaultState(), world, random, chunkX, chunkZ, 16, 16,
 				1 + (random.nextInt(5)), 20, 32, 50, BlockMatcher.forBlock(Blocks.STONE));
-
 	}
 
 	private void addOreSpawn(IBlockState block, World world, Random random, int blockXPos, int BlockZPos, int maxX,

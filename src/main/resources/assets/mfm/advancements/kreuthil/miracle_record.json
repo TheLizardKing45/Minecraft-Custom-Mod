@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "mfm:miracle_record"
+        },
+        "title": {
+            "translate": "advancements.kreuthil.miracle_record.title"
+        },
+        "description": {
+            "translate": "advancements.kreuthil.miracle_record.description"
+        },
+        "hidden": true
+    },
+    "parent": "mfm:kreuthil/root",
+    "criteria": {
+        "get_miracle_record": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mfm:miracle_record"
+                    }
+                ]
+            }
+        }
+    }
+}

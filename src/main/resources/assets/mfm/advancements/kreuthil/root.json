@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "mfm:kreuthil_ore"
+        },
+        "title": {
+            "translate": "advancements.kreuthil.root.title"
+        },
+        "description": {
+            "translate": "advancements.kreuthil.root.description"
+        },
+        "background": "mfm:textures/gui/advancements/bedrock.png",
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "criteria": {
+        "get_obsidianshard": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mfm:obsidian_shard"
+                    }
+                ]
+            }
+        }
+    }
+}

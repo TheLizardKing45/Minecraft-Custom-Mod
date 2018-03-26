@@ -11,4 +11,7 @@ public class MaterialHandler {
 			new int[] { 3, 8, 6, 3 }, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5F);
 
 	public static final ToolMaterial obsidianTool = EnumHelper.addToolMaterial("Obsidian", 4, 97, 10F, 3.5F, 15);
+
+	public static final ArmorMaterial techArmor = EnumHelper.addArmorMaterial("tech", "mfm:tech", 5,
+			new int[] { 3, 8, 6, 3 }, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5F);
 }

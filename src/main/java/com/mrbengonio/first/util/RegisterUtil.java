@@ -1,5 +1,7 @@
 package com.mrbengonio.first.util;
 
+import com.mrbengonio.first.First;
+import com.mrbengonio.first.Reference;
 import com.mrbengonio.first.init.ModBlocks;
 import com.mrbengonio.first.init.ModItems;
 import com.mrbengonio.first.init.ModSounds;
@@ -9,52 +11,55 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.SoundEvent;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+@Mod.EventBusSubscriber(modid = Reference.MOD_ID)
 public class RegisterUtil {
-	// register it here
-	public static void registerAll(FMLPreInitializationEvent event) {
-		registerBlocks(event, ModBlocks.cupaliteOre, ModBlocks.kreuthilOre, ModBlocks.saspumOre, ModBlocks.xasmoOre);
-		registerItems(event, ModItems.obsidianshard, ModItems.cupaliteingot, ModItems.kreuthilingot,
-				ModItems.saspumingot, ModItems.xasmoingot, ModItems.obsidianHelm, ModItems.obsidianChest,
-				ModItems.obsidianlegs, ModItems.obsidianboots, ModItems.obsidianPickaxe, ModItems.obsidianAxe,
-				ModItems.obsidianSpade, ModItems.obsidianSword, ModItems.CupaliteCog, ModItems.saspumBallBearing,
-				ModItems.saspumBearingBall, ModItems.GearBox, ModItems.Iron_BearingCasing, ModItems.miraclerecord);
-		registerSounds(event, ModSounds.miracle);
-	}
 
-	// A method used to register blocks
-	private static void registerBlocks(FMLPreInitializationEvent event, Block... blocks) {
-		for (Block block : blocks) { // New instance of a block for every block passed through
-			final ItemBlock itemblock = new ItemBlock(block);
-			if (event.getSide() == Side.CLIENT) {
-				GameRegistry.register(block);
-				GameRegistry.register(itemblock, block.getRegistryName());
-				ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0,
-						new ModelResourceLocation(block.getRegistryName(), "inventory"));
-			}
+	@SubscribeEvent
+	public static void registerBlocks(RegistryEvent.Register<Block> event) {
+
+		for (Block block : ModBlocks.BLOCKS.values()) {
+			event.getRegistry().register(block);
 		}
 
+		First.LOGGER.info("Registered blocks");
 	}
 
-	private static void registerItems(FMLPreInitializationEvent event, Item... items) {
-		for (Item item : items) {
-			if (event.getSide() == Side.CLIENT) {
-				GameRegistry.register(item);
-				ModelLoader.setCustomModelResourceLocation(item, 0,
-						new ModelResourceLocation(item.getRegistryName(), "inventory"));
-			}
+	@SubscribeEvent
+	public static void registerItems(RegistryEvent.Register<Item> event) {
 
+		for (Item item : ModItems.ITEMS.values()) {
+			event.getRegistry().register(item);
 		}
-	}
-
-	private static void registerSounds(FMLPreInitializationEvent event, SoundEvent... sounds) {
-		for (SoundEvent sound : sounds) {
-			GameRegistry.register(sound, sound.getSoundName());
+		for (Block block : ModBlocks.BLOCKS.values()) {
+			event.getRegistry().register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
 		}
+
+		First.LOGGER.info("Registered items");
 	}
 
+	@SubscribeEvent
+	public static void registerModels(ModelRegistryEvent event) {
+		for (Block block : ModBlocks.BLOCKS.values()) {
+			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0,
+					new ModelResourceLocation(block.getRegistryName(), "inventory"));
+		}
+		for (Item item : ModItems.ITEMS.values()) {
+			ModelLoader.setCustomModelResourceLocation(item, 0,
+					new ModelResourceLocation(item.getRegistryName(), "inventory"));
+		}
+		First.LOGGER.info("Registered models");
+	}
+
+	// Pretty sure this isn't being called
+	public static void registerSounds(RegistryEvent.Register<SoundEvent> event) {
+		event.getRegistry().registerAll(ModSounds.miracle, ModSounds.lobby);
+
+		First.LOGGER.info("Registered sounds");
+	}
 }

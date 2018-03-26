@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "mfm:xasmoninium_dust"
+        },
+        {
+            "item": "mfm:saspum_ingot"
+        },
+        {
+            "item": "mfm:cupalite_ingot"
+        }
+    ],
+    "result": {
+        "item": "mfm:tech_dust",
+        "count": 1
+    }
+}
