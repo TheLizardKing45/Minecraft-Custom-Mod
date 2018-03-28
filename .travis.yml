@@ -3,7 +3,8 @@ branches:
     - master
     - develop
   except:
-    - /^(develop-)[0-9].[0-9].[0-9][0-9][0-9]/
+    - /^develop-[0-9]\.[0-9]\.[0-9]+/
+    - /^master-[0-9]\.[0-9]\.[0-9]+/
 language: java
 matrix:
   include:
