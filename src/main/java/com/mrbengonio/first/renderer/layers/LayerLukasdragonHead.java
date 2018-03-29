@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.block.model.ItemCameraTransforms;
 import net.minecraft.client.renderer.entity.RenderPlayer;
 import net.minecraft.client.renderer.entity.layers.LayerRenderer;
+import net.minecraft.entity.player.EnumPlayerModelParts;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
@@ -25,7 +26,8 @@ public class LayerLukasdragonHead implements LayerRenderer<AbstractClientPlayer>
 
 	public void doRenderLayer(AbstractClientPlayer entitylivingbaseIn, float limbSwing, float limbSwingAmount,
 			float partialTicks, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
-		if ("lukasdragon".equals(entitylivingbaseIn.getName()) && !entitylivingbaseIn.isInvisible()) {
+		if ("lukasdragon".equals(entitylivingbaseIn.getName())
+				&& entitylivingbaseIn.isWearing(EnumPlayerModelParts.CAPE) && !entitylivingbaseIn.isInvisible()) {
 
 			GlStateManager.pushMatrix();
 			if (entitylivingbaseIn.isSneaking()) {
