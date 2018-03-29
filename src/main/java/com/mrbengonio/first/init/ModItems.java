@@ -10,6 +10,7 @@ import com.mrbengonio.first.items.ItemGenericItem;
 import com.mrbengonio.first.items.ItemSandvich;
 import com.mrbengonio.first.items.ItemTechComponent;
 import com.mrbengonio.first.items.ItemTechIngot;
+import com.mrbengonio.first.items.ItemTrollItem;
 import com.mrbengonio.first.items.armor.ArmorGenericArmor;
 import com.mrbengonio.first.items.records.ItemGenericRecord;
 import com.mrbengonio.first.items.tools.ItemGenericAxe;
@@ -89,13 +90,13 @@ public class ModItems {
 			// Effect orbs
 
 			put("orb_poison",
-					new ItemEffectItem("poison_orb", CreativeTabsHandler.tabKreuthil, 2, 64, MobEffects.POISON));
+					new ItemEffectItem("poison_orb", CreativeTabsHandler.tabKreuthil, 1, 64, MobEffects.POISON));
 			put("orb_levitation", new ItemEffectItem("levitation_orb", CreativeTabsHandler.tabKreuthil, 2, 64,
 					MobEffects.LEVITATION));
 			put("orb_glowing",
-					new ItemEffectItem("glowing_orb", CreativeTabsHandler.tabKreuthil, 2, 64, MobEffects.GLOWING));
+					new ItemEffectItem("glowing_orb", CreativeTabsHandler.tabKreuthil, 4, 64, MobEffects.GLOWING));
 			put("orb_blindness",
-					new ItemEffectItem("blindness_orb", CreativeTabsHandler.tabKreuthil, 2, 64, MobEffects.BLINDNESS));
+					new ItemEffectItem("blindness_orb", CreativeTabsHandler.tabKreuthil, 3, 64, MobEffects.BLINDNESS));
 			put("orb_regeneration", new ItemEffectItem("regeneration_orb", CreativeTabsHandler.tabKreuthil, 4, 64,
 					MobEffects.REGENERATION, MobEffects.RESISTANCE));
 
@@ -108,6 +109,10 @@ public class ModItems {
 			put("record_lobby", new ItemGenericRecord("lobby_record", ModSounds.lobby, "Lobby Time", "Kevin MacLeod"));
 			put("record_holiday", new ItemGenericRecord("holiday_record", ModSounds.holiday, "Allah's Holiday",
 					"Ted Lewis & His Band"));
+
+			// TROLL
+			put("troll_troll", new ItemTrollItem("troll_troll", CreativeTabsHandler.tabKreuthil, 1));
+
 		}
 	};
 }

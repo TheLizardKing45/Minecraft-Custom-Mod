@@ -17,7 +17,7 @@ public class CommonEventHandler {
 
 	@SideOnly(Side.CLIENT)
 	@SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
-	public void onEvent(KeyInputEvent event) {
+	public void keyPress(KeyInputEvent event) {
 
 		KeyBinding[] keyBindings = KeybindHandler.getKeyBindings();
 
