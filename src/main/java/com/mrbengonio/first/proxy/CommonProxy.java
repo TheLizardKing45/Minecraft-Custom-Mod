@@ -26,6 +26,7 @@ public class CommonProxy {
 		GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);
 		MinecraftForge.EVENT_BUS.register(new CommonEventHandler());
 		PacketDispatcher.registerPackets();
+
 	}
 
 	public void postInit(FMLPostInitializationEvent e) {
