@@ -14,5 +14,4 @@ public class ItemBase extends Item {
 		setCreativeTab(tab);
 		setMaxStackSize(maxSize);
 	}
-
 }

@@ -20,4 +20,9 @@ public class ItemTrollItem extends ItemBase {
 
 	}
 
+	@Override
+	public boolean onDroppedByPlayer(ItemStack item, EntityPlayer player) {
+		return false;
+	}
+
 }
