@@ -1,9 +1,6 @@
 package com.mrbengonio.first.commands;
 
-import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
-import net.minecraft.command.ICommandSender;
-import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.math.BlockPos;
 

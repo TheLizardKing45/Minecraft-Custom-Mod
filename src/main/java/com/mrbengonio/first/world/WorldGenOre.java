@@ -5,31 +5,17 @@ import java.util.Random;
 import com.google.common.base.Predicate;
 import com.mrbengonio.first.init.ModBlocks;
 
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.block.state.pattern.BlockMatcher;
-import net.minecraft.init.Blocks;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.pattern.BlockMatcher;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.IChunkGenerator;
-import net.minecraft.world.gen.feature.WorldGenMinable;
+import net.minecraft.world.chunk.AbstractChunkProvider;
+import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
 public class WorldGenOre implements IWorldGenerator {
 
-	@Override
-	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator,
-			IChunkProvider chunkProvider) {
-		switch (world.provider.getDimension()) {
-		case 0:
-			genSurface(world, random, chunkX * 16, chunkZ * 16);
-			break;
-		}
-	}
-
 	private void genSurface(World world, Random random, int chunkX, int chunkZ) {
-		// Block.getdefaultstate(), world, random, chunkX, chunkZ, maxVeinSize,
-		// chanceToSpawn, miny, maxy, spawninblock
 
 		addOreSpawn(ModBlocks.BLOCKS.get("ore_kreuthil").getDefaultState(), world, random, chunkX, chunkZ, 16, 12,
 				1 + random.nextInt(3), 13, 1, 10, BlockMatcher.forBlock(Blocks.STONE));
@@ -53,6 +39,16 @@ public class WorldGenOre implements IWorldGenerator {
 			(new WorldGenMinable(block, maxVeinSize, blockToSpawnIn)).generate(world, random,
 					new BlockPos(posX, posY, posZ));
 		}
+	}
+
+	@Override
+	public void generate(Random random, int chunkX, int chunkZ, World world, ChunkGenerator chunkGenerator,
+			AbstractChunkProvider chunkProvider) {
+		switch (world.getDimension().getType().getId()) {
+		case 0:
+			genSurface(world, random, chunkX * 16, chunkZ * 16);
+			break;
+		
 	}
 
 }

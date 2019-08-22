@@ -9,9 +9,9 @@ import javax.annotation.Nullable;
 
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
@@ -22,7 +22,7 @@ public class ItemTechIngot extends ItemBase {
 
 	int MaxQuality;
 
-	public ItemTechIngot(String name, CreativeTabs tab, int maxSize, int maxQuality) {
+	public ItemTechIngot(String name, ItemGroup tab, int maxSize, int maxQuality) {
 		super(name, tab, maxSize);
 		MaxQuality = maxQuality;
 	}

@@ -2,13 +2,13 @@ package com.mrbengonio.first.handlers;
 
 import com.mrbengonio.first.init.ModItems;
 
-import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
-public class CreativeTabsHandler {
-	public static final CreativeTabs tabKreuthil = new CreativeTabs("kreuthil_items") {
+public class ItemGroupHandler {
+	public static final ItemGroup tabKreuthil = new ItemGroup("kreuthil_items") {
 		@Override
-		public ItemStack getTabIconItem() {
+		public ItemStack createIcon() {
 			return new ItemStack(ModItems.ITEMS.get("ingot_kreuthil"));
 		}
 	};

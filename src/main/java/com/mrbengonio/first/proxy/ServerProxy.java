@@ -1,36 +1,22 @@
 package com.mrbengonio.first.proxy;
 
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
-import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.world.World;
 
-public class ServerProxy extends CommonProxy {
+public class ServerProxy implements IProxy {
 
 	@Override
-	public void preInit(FMLPreInitializationEvent e) {
-		super.preInit(e);
+	public void init() {
+
 	}
 
 	@Override
-	public void init(FMLInitializationEvent e) {
-		super.init(e);
+	public World getClientWorld() {
+		throw new IllegalStateException("Only run this on the client!");
 	}
 
 	@Override
-	public void serverStarting(FMLServerStartingEvent e) {
-		super.serverStarting(e);
+	public PlayerEntity getClientPlayer() {
+		throw new IllegalStateException("Only run this on the client!");
 	}
-
-	@Override
-	public void serverStopping(FMLServerStoppingEvent e) {
-		super.serverStopping(e);
-	}
-
-	@Override
-	public void postInit(FMLPostInitializationEvent e) {
-		super.postInit(e);
-	}
-
 }

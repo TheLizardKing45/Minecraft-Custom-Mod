@@ -3,7 +3,7 @@ package com.mrbengonio.first.init;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.mrbengonio.first.handlers.CreativeTabsHandler;
+import com.mrbengonio.first.handlers.ItemGroupHandler;
 import com.mrbengonio.first.handlers.MaterialHandler;
 import com.mrbengonio.first.items.ItemEffectItem;
 import com.mrbengonio.first.items.ItemGenericItem;
@@ -31,73 +31,73 @@ public class ModItems {
 	public static final Map<String, Item> ITEMS = new HashMap<String, Item>() {
 		{
 			// Ingots
-			put("ingot_cupalite", new ItemTechIngot("cupalite_ingot", CreativeTabsHandler.tabKreuthil, 16, 5));
-			put("ingot_saspum", new ItemTechIngot("saspum_ingot", CreativeTabsHandler.tabKreuthil, 32, 5));
-			put("ingot_kreuthil", new ItemTechIngot("kreuthil_ingot", CreativeTabsHandler.tabKreuthil, 16, 5));
-			put("ingot_xasmoninium", new ItemTechIngot("xasmoninium_ingot", CreativeTabsHandler.tabKreuthil, 16, 5));
+			put("ingot_cupalite", new ItemTechIngot("cupalite_ingot", ItemGroupHandler.tabKreuthil, 16, 5));
+			put("ingot_saspum", new ItemTechIngot("saspum_ingot", ItemGroupHandler.tabKreuthil, 32, 5));
+			put("ingot_kreuthil", new ItemTechIngot("kreuthil_ingot", ItemGroupHandler.tabKreuthil, 16, 5));
+			put("ingot_xasmoninium", new ItemTechIngot("xasmoninium_ingot", ItemGroupHandler.tabKreuthil, 16, 5));
 
-			put("alloy_tech", new ItemTechComponent("tech_alloy", CreativeTabsHandler.tabKreuthil, 16));
+			put("alloy_tech", new ItemTechComponent("tech_alloy", ItemGroupHandler.tabKreuthil, 16));
 
 			// Gems
-			put("gem_obsidian", new ItemGenericItem("obsidian_gem", CreativeTabsHandler.tabKreuthil, 64));
+			put("gem_obsidian", new ItemGenericItem("obsidian_gem", ItemGroupHandler.tabKreuthil, 64));
 
 			// Powders
-			put("powder_xasmoninium", new ItemTechComponent("xasmoninium_dust", CreativeTabsHandler.tabKreuthil, 64));
-			put("powder_saspum", new ItemTechComponent("saspum_dust", CreativeTabsHandler.tabKreuthil, 64));
-			put("powder_cupalite", new ItemTechComponent("cupalite_dust", CreativeTabsHandler.tabKreuthil, 64));
-			put("powder_tech", new ItemTechComponent("tech_dust", CreativeTabsHandler.tabKreuthil, 16));
+			put("powder_xasmoninium", new ItemTechComponent("xasmoninium_dust", ItemGroupHandler.tabKreuthil, 64));
+			put("powder_saspum", new ItemTechComponent("saspum_dust", ItemGroupHandler.tabKreuthil, 64));
+			put("powder_cupalite", new ItemTechComponent("cupalite_dust", ItemGroupHandler.tabKreuthil, 64));
+			put("powder_tech", new ItemTechComponent("tech_dust", ItemGroupHandler.tabKreuthil, 16));
 
 			// Shards
-			put("shard_obsidian", new ItemGenericItem("obsidian_shard", CreativeTabsHandler.tabKreuthil, 64));
+			put("shard_obsidian", new ItemGenericItem("obsidian_shard", ItemGroupHandler.tabKreuthil, 64));
 
 			// Crafting Components
-			put("cog_cupalite", new ItemTechComponent("Cupalite_cog", CreativeTabsHandler.tabKreuthil, 64));
-			put("bearingball_saspum", new ItemTechComponent("saspum_bearingball", CreativeTabsHandler.tabKreuthil, 64));
-			put("ballbearing_saspum", new ItemTechComponent("saspum_ballbearing", CreativeTabsHandler.tabKreuthil, 32));
-			put("bearingcasing_iron", new ItemGenericItem("iron_bearingcasing", CreativeTabsHandler.tabKreuthil, 32));
-			put("component_gearbox", new ItemTechComponent("gearbox", CreativeTabsHandler.tabKreuthil, 8));
-			put("component_opticboard", new ItemTechComponent("optic_board", CreativeTabsHandler.tabKreuthil, 64));
+			put("cog_cupalite", new ItemTechComponent("Cupalite_cog", ItemGroupHandler.tabKreuthil, 64));
+			put("bearingball_saspum", new ItemTechComponent("saspum_bearingball", ItemGroupHandler.tabKreuthil, 64));
+			put("ballbearing_saspum", new ItemTechComponent("saspum_ballbearing", ItemGroupHandler.tabKreuthil, 32));
+			put("bearingcasing_iron", new ItemGenericItem("iron_bearingcasing", ItemGroupHandler.tabKreuthil, 32));
+			put("component_gearbox", new ItemTechComponent("gearbox", ItemGroupHandler.tabKreuthil, 8));
+			put("component_opticboard", new ItemTechComponent("optic_board", ItemGroupHandler.tabKreuthil, 64));
 
 			// Armor
-			put("helmet_obsidian", new ArmorGenericArmor("obsidian_helmet", CreativeTabsHandler.tabKreuthil,
+			put("helmet_obsidian", new ArmorGenericArmor("obsidian_helmet", ItemGroupHandler.tabKreuthil,
 					MaterialHandler.obsidianArmor, 0, EntityEquipmentSlot.HEAD));
-			put("chestplate_obsidian", new ArmorGenericArmor("obsidian_chestplate", CreativeTabsHandler.tabKreuthil,
+			put("chestplate_obsidian", new ArmorGenericArmor("obsidian_chestplate", ItemGroupHandler.tabKreuthil,
 					MaterialHandler.obsidianArmor, 0, EntityEquipmentSlot.CHEST));
-			put("leggings_obsidian", new ArmorGenericArmor("obsidian_leggings", CreativeTabsHandler.tabKreuthil,
+			put("leggings_obsidian", new ArmorGenericArmor("obsidian_leggings", ItemGroupHandler.tabKreuthil,
 					MaterialHandler.obsidianArmor, 1, EntityEquipmentSlot.LEGS));
-			put("boots_obsidian", new ArmorGenericArmor("obsidian_boots", CreativeTabsHandler.tabKreuthil,
+			put("boots_obsidian", new ArmorGenericArmor("obsidian_boots", ItemGroupHandler.tabKreuthil,
 					MaterialHandler.obsidianArmor, 0, EntityEquipmentSlot.FEET));
-			put("helmet_tech", new ArmorGenericArmor("tech_helmet", CreativeTabsHandler.tabKreuthil,
+			put("helmet_tech", new ArmorGenericArmor("tech_helmet", ItemGroupHandler.tabKreuthil,
 					MaterialHandler.techArmor, 0, EntityEquipmentSlot.HEAD));
-			put("chestplate_explosive", new ArmorGenericArmor("bomber_chestplate", CreativeTabsHandler.tabKreuthil,
+			put("chestplate_explosive", new ArmorGenericArmor("bomber_chestplate", ItemGroupHandler.tabKreuthil,
 					ItemArmor.ArmorMaterial.LEATHER, 0, EntityEquipmentSlot.CHEST));
 
 			// Tools
-			put("pickaxe_obsidian", new ItemGenericPickaxe("obsidian_pickaxe", CreativeTabsHandler.tabKreuthil,
+			put("pickaxe_obsidian", new ItemGenericPickaxe("obsidian_pickaxe", ItemGroupHandler.tabKreuthil,
 					MaterialHandler.obsidianTool));
 			put("axe_obsidian",
-					new ItemGenericAxe("obsidian_axe", CreativeTabsHandler.tabKreuthil, MaterialHandler.obsidianTool));
-			put("spade_obsidian", new ItemGenericSpade("obsidian_spade", CreativeTabsHandler.tabKreuthil,
+					new ItemGenericAxe("obsidian_axe", ItemGroupHandler.tabKreuthil, MaterialHandler.obsidianTool));
+			put("spade_obsidian", new ItemGenericSpade("obsidian_spade", ItemGroupHandler.tabKreuthil,
 					MaterialHandler.obsidianTool));
-			put("sword_obsidian", new ItemGenericSword("obsidian_sword", CreativeTabsHandler.tabKreuthil,
+			put("sword_obsidian", new ItemGenericSword("obsidian_sword", ItemGroupHandler.tabKreuthil,
 					MaterialHandler.obsidianTool));
 			put("hoe_obsidian",
-					new ItemGenericHoe("obsidian_hoe", CreativeTabsHandler.tabKreuthil, MaterialHandler.obsidianTool));
+					new ItemGenericHoe("obsidian_hoe", ItemGroupHandler.tabKreuthil, MaterialHandler.obsidianTool));
 
 			put("sword_ornate",
-					new ItemOrnateSword("ornate_sword", CreativeTabsHandler.tabKreuthil, ToolMaterial.IRON));
+					new ItemOrnateSword("ornate_sword", ItemGroupHandler.tabKreuthil, ToolMaterial.IRON));
 
 			// Effect orbs
 
 			put("orb_poison",
-					new ItemEffectItem("poison_orb", CreativeTabsHandler.tabKreuthil, 1, 64, MobEffects.POISON));
-			put("orb_levitation", new ItemEffectItem("levitation_orb", CreativeTabsHandler.tabKreuthil, 2, 64,
+					new ItemEffectItem("poison_orb", ItemGroupHandler.tabKreuthil, 1, 64, MobEffects.POISON));
+			put("orb_levitation", new ItemEffectItem("levitation_orb", ItemGroupHandler.tabKreuthil, 2, 64,
 					MobEffects.LEVITATION));
 			put("orb_glowing",
-					new ItemEffectItem("glowing_orb", CreativeTabsHandler.tabKreuthil, 4, 64, MobEffects.GLOWING));
+					new ItemEffectItem("glowing_orb", ItemGroupHandler.tabKreuthil, 4, 64, MobEffects.GLOWING));
 			put("orb_blindness",
-					new ItemEffectItem("blindness_orb", CreativeTabsHandler.tabKreuthil, 3, 64, MobEffects.BLINDNESS));
-			put("orb_regeneration", new ItemEffectItem("regeneration_orb", CreativeTabsHandler.tabKreuthil, 4, 64,
+					new ItemEffectItem("blindness_orb", ItemGroupHandler.tabKreuthil, 3, 64, MobEffects.BLINDNESS));
+			put("orb_regeneration", new ItemEffectItem("regeneration_orb", ItemGroupHandler.tabKreuthil, 4, 64,
 					MobEffects.REGENERATION, MobEffects.RESISTANCE));
 
 			// FOOD
@@ -111,7 +111,7 @@ public class ModItems {
 					"Ted Lewis & His Band"));
 
 			// TROLL
-			put("troll_troll", new ItemTrollItem("troll_troll", CreativeTabsHandler.tabKreuthil, 1));
+			put("troll_troll", new ItemTrollItem("troll_troll", ItemGroupHandler.tabKreuthil, 1));
 
 		}
 	};

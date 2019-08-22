@@ -1,6 +1,6 @@
 package com.mrbengonio.first.networking;
 
-import com.mrbengonio.first.First;
+import com.mrbengonio.first.Mfm;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
@@ -45,10 +45,10 @@ public abstract class AbstractMessageHandler<T extends IMessage> implements IMes
 			// the only reason to check side here is to use our more aptly named handling
 			// methods
 			// client side proxy will return the client side EntityPlayer
-			return handleClientMessage(First.proxy.getPlayerEntity(ctx), message, ctx);
+			return handleClientMessage(Mfm.proxy.getPlayerEntity(ctx), message, ctx);
 		} else {
 			// server side proxy will return the server side EntityPlayer
-			return handleServerMessage(First.proxy.getPlayerEntity(ctx), message, ctx);
+			return handleServerMessage(Mfm.proxy.getPlayerEntity(ctx), message, ctx);
 		}
 	}
 }

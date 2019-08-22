@@ -6,16 +6,16 @@ import com.mrbengonio.first.networking.packets.BomberVestExplodeMessage;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraftforge.fml.common.eventhandler.EventPriority;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.InputEvent.KeyInputEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class CommonEventHandler {
 
-	@SideOnly(Side.CLIENT)
+	@OnlyIn(Dist.CLIENT)
 	@SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
 	public void keyPress(KeyInputEvent event) {
 
@@ -23,7 +23,7 @@ public class CommonEventHandler {
 
 		// Armor Utility Button
 		if (keyBindings[0].isPressed()) {
-			EntityPlayer player = Minecraft.getMinecraft().player;
+			PlayerEntity player = Minecraft.getInstance().player;
 
 			if (player.inventory.armorItemInSlot(2) != null
 					&& player.inventory.armorItemInSlot(2).getItem() == ModItems.ITEMS.get("chestplate_explosive")) {
