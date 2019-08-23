@@ -6,7 +6,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
 public class ItemGroupHandler {
-	public static final ItemGroup tabKreuthil = new ItemGroup("kreuthil_items") {
+	public static final ItemGroup groupKreuthil = new ItemGroup("kreuthil_items") {
 		@Override
 		public ItemStack createIcon() {
 			return new ItemStack(ModItems.ITEMS.get("ingot_kreuthil"));

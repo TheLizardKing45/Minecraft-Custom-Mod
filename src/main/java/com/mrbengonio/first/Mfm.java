@@ -3,6 +3,9 @@ package com.mrbengonio.first;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.mojang.brigadier.CommandDispatcher;
+import com.mrbengonio.first.commands.LightningCommand;
+import com.mrbengonio.first.commands.LukasdragonCommand;
 import com.mrbengonio.first.gui.TechStatusBarRenderer;
 import com.mrbengonio.first.handlers.CommonEventHandler;
 import com.mrbengonio.first.handlers.GuiEventHandler;
@@ -60,8 +63,9 @@ public class Mfm {
 
 	@SubscribeEvent
 	public void serverStarting(FMLServerStartingEvent event) {
-		// event.registerServerCommand(new CommandLukasdragon());
-		// event.registerServerCommand(new CommandLightning());
+		CommandDispatcher dispatcher = event.getServer().getCommandManager().getDispatcher();
+		LukasdragonCommand.register(dispatcher);
+		LightningCommand.register(dispatcher);
 	}
 
 	@SubscribeEvent

@@ -15,7 +15,7 @@ public class ItemSandvich extends FoodBase {
 
 		// String name, ItemGroup tab, int maxSize, int hunger, float saturation,
 		// EffectInstance effectIn, float probability
-		super(name, ItemGroupHandler.tabKreuthil, 64, 1, 1,
+		super(name, ItemGroupHandler.groupKreuthil, 64, 1, 1,
 				new EffectInstance(Effects.ABSORPTION, 20 * 10, 5, false, true), 100);
 	}
 

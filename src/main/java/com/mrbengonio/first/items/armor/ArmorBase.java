@@ -8,7 +8,7 @@ import net.minecraft.item.ItemArmor;
 
 public class ArmorBase extends ItemArmor {
 	public ArmorBase(String name, ArmorMaterial material, int renderIndex, EntityEquipmentSlot equipmentSlot) {
-		this(name, ItemGroupHandler.tabKreuthil, material, renderIndex, equipmentSlot);
+		this(name, ItemGroupHandler.groupKreuthil, material, renderIndex, equipmentSlot);
 	}
 
 	public ArmorBase(String name, CreativeTabs tab, ArmorMaterial material, int renderIndex,

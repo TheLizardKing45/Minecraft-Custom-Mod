@@ -1,7 +1,5 @@
 package com.mrbengonio.first.handlers;
 
-import org.lwjgl.input.Keyboard;
-
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 
@@ -17,7 +15,7 @@ public class KeybindHandler {
 		// declare an array of key bindings
 
 		// instantiate the key bindings
-		keyBindings[0] = new KeyBinding("key.armorutil.desc", Keyboard.KEY_G, "key.kreuthil.category");
+		keyBindings[0] = new KeyBinding("key.armorutil.desc", 0, "key.kreuthil.category");
 
 		// register all the key bindings
 		for (int i = 0; i < keyBindings.length; ++i) {

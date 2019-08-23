@@ -1,9 +1,7 @@
 package com.mrbengonio.first.handlers;
 
-import net.minecraft.init.SoundEvents;
-import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.item.ItemArmor.ArmorMaterial;
-import net.minecraftforge.common.util.EnumHelper;
+import net.minecraft.item.ArmorMaterial;
+import net.minecraft.util.SoundEvents;
 
 public class MaterialHandler {
 

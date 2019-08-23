@@ -7,16 +7,17 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ItemTechIngot extends ItemBase {
 
@@ -30,32 +31,32 @@ public class ItemTechIngot extends ItemBase {
 	int Quality;
 
 	@Override
-	public void onUpdate(ItemStack stack, World world, Entity entity, int itemSlot, boolean isSelected) {
-		NBTTagCompound nbt;
+	public void inventoryTick(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
+		CompoundNBT nbt;
 
 		// Setup tag compound on the item
-		if (!stack.hasTagCompound()) {
+		if (!stack.hasTag()) {
 
-			EntityPlayer player = (EntityPlayer) entity;
+			PlayerEntity player = (PlayerEntity) entityIn;
 			int stackSize = stack.getCount() - 1;
 
 			// If the itemstack is larger than 1, delete extra items!
 			if (stack.getCount() > 1) {
-				stack.splitStack(stackSize);
+				stack.split(stackSize);
 			}
 
 			// chooses a random item quality!
 			Random rn = new Random();
-			nbt = new NBTTagCompound();
+			nbt = new CompoundNBT();
 			// Set NBT Quality data
-			nbt.setFloat("Quality", rn.nextInt(MaxQuality) + 1);
-			nbt.setInteger("MaxQuality", MaxQuality);
-			stack.setTagCompound(nbt);
+			nbt.putFloat("Quality", rn.nextInt(MaxQuality) + 1);
+			nbt.putInt("MaxQuality", MaxQuality);
+			stack.setTag(nbt);
 
 			// re-adds the deleted items as a new itemstack!
 			if (!player.inventory.addItemStackToInventory(new ItemStack(stack.getItem(), stackSize))) {
 				// spawns item drop if inventory is full
-				if (!world.isRemote)
+				if (!worldIn.isRemote)
 					player.entityDropItem(new ItemStack(stack.getItem(), stackSize), 0F);
 			}
 
@@ -63,17 +64,18 @@ public class ItemTechIngot extends ItemBase {
 	}
 
 	@Override
-	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		if (stack.hasTagCompound() && stack.getTagCompound().hasKey("Quality")
-				&& stack.getTagCompound().getInteger("MaxQuality") > 0) {
+	@OnlyIn(Dist.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip,
+			ITooltipFlag flagIn) {
+		if (stack.hasTag() && stack.getTag().hasUniqueId("Quality") && stack.getTag().getInt("MaxQuality") > 0) {
 			NumberFormat nf = new DecimalFormat("##.###");
 
-			tooltip.add(
-					I18n.format("lore.quality.QUALITY") + ": " + nf.format(stack.getTagCompound().getFloat("Quality"))
-							+ "/" + Integer.toString(stack.getTagCompound().getInteger("MaxQuality")));
+			tooltip.add(new TranslationTextComponent("lore.quality.QUALITY")
+					.appendText(": " + nf.format(stack.getTag().getFloat("Quality")) + "/"
+							+ Integer.toString(stack.getTag().getInt("MaxQuality"))));
 		} else {
-			tooltip.add(I18n.format("lore.quality.QUALITY") + ": " + I18n.format("lore.quality.UNKNOWN"));
+			tooltip.add(new TranslationTextComponent("lore.quality.QUALITY").appendText(": ")
+					.appendSibling(new TranslationTextComponent("lore.quality.UNKNOWN")));
 		}
 	}
 

@@ -15,13 +15,13 @@ public class ModBlocks {
 	public static final Map<String, Block> BLOCKS = new HashMap<String, Block>() {
 		{
 			// Ore
-			put("ore_cupalite", new BlockGenericBlock("cupalite_ore", Material.ROCK, ItemGroupHandler.tabKreuthil, 6F,
+			put("ore_cupalite", new BlockGenericBlock("cupalite_ore", Material.ROCK, ItemGroupHandler.groupKreuthil, 6F,
 					50F, ToolType.PICKAXE, 4));
-			put("ore_saspum", new BlockGenericBlock("saspum_ore", Material.ROCK, ItemGroupHandler.tabKreuthil, 6F, 50F,
+			put("ore_saspum", new BlockGenericBlock("saspum_ore", Material.ROCK, ItemGroupHandler.groupKreuthil, 6F, 50F,
 					ToolType.PICKAXE, 4));
-			put("ore_kreuthil", new BlockGenericBlock("kreuthil_ore", Material.ROCK, ItemGroupHandler.tabKreuthil, 6F,
-					50F, "pickaxe", 4));
-			put("ore_xasmoninium", new BlockGenericBlock("xasmoninium_ore", Material.ROCK, ItemGroupHandler.tabKreuthil,
+			put("ore_kreuthil", new BlockGenericBlock("kreuthil_ore", Material.ROCK, ItemGroupHandler.groupKreuthil, 6F,
+					50F, ToolType.PICKAXE, 4));
+			put("ore_xasmoninium", new BlockGenericBlock("xasmoninium_ore", Material.ROCK, ItemGroupHandler.groupKreuthil,
 					6F, 50F, ToolType.PICKAXE, 4));
 		}
 	};

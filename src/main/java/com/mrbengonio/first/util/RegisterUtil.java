@@ -31,7 +31,7 @@ public class RegisterUtil {
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event) {
 
-		Item.Properties properties = new Item.Properties().group(ItemGroupHandler.tabKreuthil);
+		Item.Properties properties = new Item.Properties().group(ItemGroupHandler.groupKreuthil);
 
 		for (Item item : ModItems.ITEMS.values()) {
 			event.getRegistry().register(item);
